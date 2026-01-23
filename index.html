@@ -669,7 +669,7 @@
         name: "Chapter 3. 중복조합",
         chapterInfo: [
           { partName: "Part1", description: "중복조합", range: "Q1~Q10" },
-          { partName: "Part2", description: "경우의 수 구별해보기", range: "Q1~Q8" }
+          { partName: "Part2", description: "경우의 수 구별해보기", range: "Q1~Q7" }
         ],
         chapters: [
           { id: 1, name: "Part1. 중복조합", questions: [
@@ -766,39 +766,32 @@
                 { question: "다음 문제에 대하여 설명하여라.<br>[Q3-3] 양수와 음수를 모두 고려해야 하는 경우의 수 문제 풀이법을 설명하시오.", answer: "", hint: "", explanation: "" }
               ]
             },
-            { question: "다음 문제에 대하여 설명하여라.<br>[Q4] 두 집합 \\(X = \\{1, 2, 3, 4\\}\\), \\(Y = \\{5, 6, 7, 8, 9, 10\\}\\)에 대하여 다음 조건을 만족하는 \\(X\\)에서 \\(Y\\)로의 함수의 개수를 각각 구하고 설명하시오.<br>① \\(X\\)에서 \\(Y\\)로의 함수<br>② \\(x_i \\neq x_j\\)이면 \\(f(x_i) \\neq f(x_j)\\) (일대일함수)", answer: "", hint: "", explanation: "",
+            { question: "다음 문제에 대하여 설명하여라.<br>[Q4] 두 집합 \\(X = \\{1, 2, 3\\}\\), \\(Y = \\{4, 5, 6, 7, 8\\}\\)에 대하여 주어진 조건을 만족하는 \\(X\\)에서 \\(Y\\)로의 함수의 개수를 구하시오.<br>① \\(X\\)에서 \\(Y\\)로의 함수<br>② \\(x_i \\neq x_j\\)이면 \\(f(x_i) \\neq f(x_j)\\)<br>③ \\(x_i < x_j\\)이면 \\(f(x_i) < f(x_j)\\)<br>④ \\(x_i < x_j\\)이면 \\(f(x_i) \\leq f(x_j)\\)", answer: "", hint: "", explanation: "",
               similarQuestions: [
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-1] 집합 \\(A = \\{1,2,3\\}\\)에서 \\(B = \\{a,b,c,d,e\\}\\)로의 함수의 개수를 구하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-2] 일대일함수와 일반 함수의 경우의 수 차이를 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-3] 함수의 개수를 구할 때 중복순열과 순열 중 어느 것을 사용하는지 설명하시오.", answer: "", hint: "", explanation: "" }
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-1] 집합 \\(A = \\{1,2,3,4\\}\\)에서 \\(B = \\{5,6,7,8,9,10\\}\\)으로의 4가지 함수 조건 개수를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-2] 일반함수, 일대일함수, 순증가함수, 비감소함수를 각각 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q4-3] 함수의 각 조건에 따라 중복순열, 순열, 조합, 중복조합 중 어느 것을 사용하는지 설명하시오.", answer: "", hint: "", explanation: "" }
               ]
             },
-            { question: "다음 문제에 대하여 설명하여라.<br>[Q5] 위 Q4 문제에서 다음 조건을 만족하는 함수의 개수를 구하고 설명하시오.<br>③ \\(x_i < x_j\\)이면 \\(f(x_i) < f(x_j)\\) (순증가함수)<br>④ \\(x_i < x_j\\)이면 \\(f(x_i) \\leq f(x_j)\\) (비감소함수)", answer: "", hint: "", explanation: "",
+            { question: "다음 문제에 대하여 설명하여라.<br>[Q5] 다음 4가지 상황을 중복순열, 순열, 중복조합, 조합 중 어느 것으로 풀어야 하는지 각각 판단하고 그 이유를 설명하시오.<br><br>A) 5명 중 3명을 뽑아 일렬로 세우기<br>B) 3종류 과일에서 중복을 허용하여 5개 선택<br>C) 1,2,3 숫자로 비밀번호 4자리 만들기 (중복 가능)<br>D) 10명 중 3명의 대표 선출", answer: "", hint: "", explanation: "",
               similarQuestions: [
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-1] 순증가함수의 개수를 조합으로 구하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-2] 비감소함수의 개수를 중복조합으로 구하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-3] \\(f(x_i) < f(x_j)\\)와 \\(f(x_i) \\leq f(x_j)\\)의 차이가 경우의 수에 미치는 영향을 설명하시오.", answer: "", hint: "", explanation: "" }
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-1] 순서를 고려하는지 여부로 순열/조합을 구분하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-2] 중복을 허용하는지 여부로 경우의 수 계산법이 어떻게 달라지는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q5-3] 4가지 경우의 수(중복순열, 순열, 중복조합, 조합)를 구분하는 기준을 표로 정리하여 설명하시오.", answer: "", hint: "", explanation: "" }
               ]
             },
-            { question: "다음 문제에 대하여 설명하여라.<br>[Q6] 다음 4가지 상황을 중복순열, 순열, 중복조합, 조합 중 어느 것으로 풀어야 하는지 각각 판단하고 그 이유를 설명하시오.<br><br>A) 5명 중 3명을 뽑아 일렬로 세우기<br>B) 3종류 과일에서 중복을 허용하여 5개 선택<br>C) 1,2,3 숫자로 비밀번호 4자리 만들기 (중복 가능)<br>D) 10명 중 3명의 대표 선출", answer: "", hint: "", explanation: "",
+            { question: "다음 문제에 대하여 설명하여라.<br>[Q6] 방정식 \\(x+y+z=6\\)과 부등식 \\(x+y+z \\leq 6\\)의 음이 아닌 정수해 개수를 각각 구하고, 두 문제의 풀이 방법 차이를 설명하시오.", answer: "", hint: "", explanation: "",
               similarQuestions: [
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-1] 순서를 고려하는지 여부로 순열/조합을 구분하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-2] 중복을 허용하는지 여부로 경우의 수 계산법이 어떻게 달라지는지 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-3] 4가지 경우의 수(중복순열, 순열, 중복조합, 조합)를 구분하는 기준을 표로 정리하여 설명하시오.", answer: "", hint: "", explanation: "" }
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-1] 등식과 부등식 부정방정식의 차이점을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-2] 부등식을 등식으로 변환하는 방법(더미 변수 추가)을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q6-3] \\(x+y \\leq 5\\)를 \\(x+y+w=5\\)로 바꾸는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
               ]
             },
-            { question: "다음 문제에 대하여 설명하여라.<br>[Q7] 방정식 \\(x+y+z=6\\)과 부등식 \\(x+y+z \\leq 6\\)의 음이 아닌 정수해 개수를 각각 구하고, 두 문제의 풀이 방법 차이를 설명하시오.", answer: "", hint: "", explanation: "",
+            { question: "다음 문제에 대하여 설명하여라.<br>[Q7] 다음 각 상황이 어떤 경우의 수 유형인지 판단하고, 그 개수를 구하는 공식을 쓰시오.<br><br>A) \\(n\\)개 중 \\(r\\)개를 뽑아 순서대로 배열<br>B) \\(n\\)개 중 \\(r\\)개를 선택 (순서 무관)<br>C) \\(n\\)종류에서 중복 허용하여 \\(r\\)개 선택<br>D) \\(n\\)가지 중 중복 허용하여 \\(r\\)번 선택", answer: "", hint: "", explanation: "",
               similarQuestions: [
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-1] 등식과 부등식 부정방정식의 차이점을 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-2] 부등식을 등식으로 변환하는 방법(더미 변수 추가)을 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-3] \\(x+y \\leq 5\\)를 \\(x+y+w=5\\)로 바꾸는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
-              ]
-            },
-            { question: "다음 문제에 대하여 설명하여라.<br>[Q8] 다음 각 상황이 어떤 경우의 수 유형인지 판단하고, 그 개수를 구하는 공식을 쓰시오.<br><br>A) \\(n\\)개 중 \\(r\\)개를 뽑아 순서대로 배열<br>B) \\(n\\)개 중 \\(r\\)개를 선택 (순서 무관)<br>C) \\(n\\)종류에서 중복 허용하여 \\(r\\)개 선택<br>D) \\(n\\)가지 중 중복 허용하여 \\(r\\)번 선택", answer: "", hint: "", explanation: "",
-              similarQuestions: [
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q8-1] \\(_nP_r\\), \\(_nC_r\\), \\(_nH_r\\), \\(n^r\\)을 각각 언제 사용하는지 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q8-2] 경우의 수 4대 공식의 차이점을 표로 정리하여 설명하시오.", answer: "", hint: "", explanation: "" },
-                { question: "다음 문제에 대하여 설명하여라.<br>[Q8-3] 문제를 읽고 어떤 공식을 사용할지 판단하는 기준을 설명하시오.", answer: "", hint: "", explanation: "" }
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-1] \\(_nP_r\\), \\(_nC_r\\), \\(_nH_r\\), \\(n^r\\)을 각각 언제 사용하는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-2] 경우의 수 4대 공식의 차이점을 표로 정리하여 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하여라.<br>[Q7-3] 문제를 읽고 어떤 공식을 사용할지 판단하는 기준을 설명하시오.", answer: "", hint: "", explanation: "" }
               ]
             }
           ]}
