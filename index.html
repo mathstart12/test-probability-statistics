@@ -1257,6 +1257,177 @@
             }
           ]}
         ]
+      },
+      {
+        id: 7,
+        name: "Chapter 7. 이산확률변수와 이항분포",
+        chapterInfo: [
+          { partName: "Part1", description: "확률변수", range: "Q1~Q6" },
+          { partName: "Part2", description: "이산확률변수", range: "Q1~Q6" },
+          { partName: "Part3", description: "확률분포", range: "Q1~Q10" }
+        ],
+        chapters: [
+          { id: 1, name: "Part1. 확률변수", questions: [
+            { question: "다음 중 하나를 골라 모집단과 표본의 관계를 설명하시오.<br>[Q1] 모집단과 표본은 어떤 관계인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 전국 고등학생의 키를 조사할 때, 전국 고등학생 전체 / 조사 대상 1000명<br>ㄴ. 공장에서 생산된 전구의 수명을 조사할 때, 모든 전구 / 검사용 100개<br>ㄷ. TV 시청률 조사에서 전국 가구 / 조사 대상 가구</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 모집단의 정의를 쓰고, 전수조사가 어려운 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 표본의 정의를 쓰고, 표본조사의 장점을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 표본이 모집단을 잘 대표하려면 어떤 조건이 필요한지 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 자료와 변수의 차이를 설명하시오.<br>[Q2] 통계에서 「자료」와 「변수」는 어떻게 다른지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 학생들의 키 측정값 vs 키라는 항목<br>ㄴ. 주사위를 던져 나온 눈의 수 vs 눈의 수라는 항목<br>ㄷ. 시험 점수 85, 90, 75 vs 시험 점수라는 항목</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] 변수의 정의를 쓰고, 변수가 가질 수 있는 값의 예를 드시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] 자료의 정의를 쓰고, 자료 수집 방법의 예를 드시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] 변수와 자료의 관계를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 확률변수를 설명하시오.<br>[Q3] 확률변수는 왜 함수처럼 생각할 수 있는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전 2개를 던질 때 앞면의 개수 X (HH→2, HT→1, TH→1, TT→0)<br>ㄴ. 주사위를 던질 때 나오는 눈의 수 X (각 결과→숫자)<br>ㄷ. 복권 당첨 금액 X (당첨→금액, 꽝→0)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 확률변수의 정의를 쓰고, 표본공간과의 관계를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] 확률변수를 대문자 \\(X\\)로 나타내는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 확률변수의 값과 그 확률의 관계를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q4] 확률변수의 각 값에 대응하는 확률은 몇 개인지 설명하시오.", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] 확률변수 \\(X\\)가 특정 값을 가질 확률 \\(P(X=x)\\)의 의미를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] 확률변수의 모든 값에 대한 확률의 합이 1인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] 하나의 확률변수 값에 여러 확률이 대응될 수 없는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q5] 확률변수의 성질은 어떤 조건을 만족해야 하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[조건]</b><br>① 각 확률 \\(P(X=x_i)\\)는 ____ 이상이다.<br>② 모든 확률의 합 \\(\\sum P(X=x_i)\\)는 ____이다.</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] 확률이 음수가 될 수 없는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] 확률의 합이 1인 이유를 전사건의 관점에서 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] 확률변수의 성질을 만족하지 않는 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 확률변수의 종류를 설명하시오.<br>[Q6] 확률변수는 어떻게 두 종류로 나뉘는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 주사위 눈의 수(이산) vs 사람의 키(연속)<br>ㄴ. 동전 앞면 개수(이산) vs 버스 대기 시간(연속)<br>ㄷ. 불량품 개수(이산) vs 전구의 수명(연속)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-1] 이산확률변수의 정의를 쓰고 예를 3가지 드시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-2] 연속확률변수의 정의를 쓰고 예를 3가지 드시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-3] 이산과 연속을 구분하는 기준을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]},
+          { id: 2, name: "Part2. 이산확률변수", questions: [
+            { question: "다음 중 하나를 골라 이산확률변수를 설명하시오.<br>[Q1] 이산확률변수는 어떤 값들을 가질 수 있는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전 3개를 던질 때 앞면의 개수: 0, 1, 2, 3<br>ㄴ. 주사위를 던질 때 나오는 눈의 수: 1, 2, 3, 4, 5, 6<br>ㄷ. 복권 10장 중 당첨 개수: 0, 1, 2, ..., 10</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 이산확률변수의 값이 '셀 수 있다'는 것의 의미를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 이산확률변수의 값이 유한개 또는 무한개일 수 있음을 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 이산확률변수가 정수값만 갖는 것은 아님을 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 「셀 수 있다」의 의미를 설명하시오.<br>[Q2] 「셀 수 있다」는 것은 어떤 상황을 뜻하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 가방 안의 공의 개수를 하나씩 세는 경우<br>ㄴ. 시험에서 맞힌 문제의 개수를 세는 경우<br>ㄷ. 하루에 받는 전화의 횟수를 세는 경우</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] 셀 수 없는 경우의 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] 자연수와 일대일 대응이 가능하면 셀 수 있음을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] 실수 구간의 값이 셀 수 없는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 이산확률변수의 예를 설명하시오.<br>[Q3] 이산확률변수의 예를 들고 가능한 값을 나열하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전 2개를 던질 때 앞면의 개수 \\(X\\)<br>ㄴ. 제품 5개 중 불량품의 개수 \\(X\\)<br>ㄷ. 주사위 2개의 눈의 합 \\(X\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 동전 3개를 던질 때 앞면의 개수 \\(X\\)의 가능한 값을 모두 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] 주사위 1개를 던질 때 3의 배수가 나오는 횟수 \\(X\\)의 가능한 값을 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 카드 1~5에서 2장을 뽑을 때 짝수 카드의 개수 \\(X\\)의 가능한 값을 쓰시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 확률분포표를 설명하시오.<br>[Q4] 이산확률변수는 어떻게 표로 정리할 수 있는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전 2개: \\(X\\)=앞면 개수, \\(P(X=0)=\\frac{1}{4}\\), \\(P(X=1)=\\frac{1}{2}\\), \\(P(X=2)=\\frac{1}{4}\\)<br>ㄴ. 주사위 1개: \\(X\\)=눈의 수, 각 확률 \\(\\frac{1}{6}\\)<br>ㄷ. 복권 3장(당첨확률 0.1): \\(X\\)=당첨 개수</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] 확률분포표의 형식을 설명하고 예를 그리시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] 확률분포표에서 확률의 합이 1임을 확인하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] 확률분포표를 이용하여 \\(P(X \\geq 1)\\)을 구하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q5] 확률분포표는 어떤 정보를 담고 있는지 설명하시오.", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] 확률분포표에서 확률변수의 값을 읽는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] 확률분포표에서 각 확률값의 의미를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] 확률분포표를 그래프로 나타내는 방법을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 확률질량함수를 설명하시오.<br>[Q6] 확률질량함수는 어떤 함수이고 어떤 조건을 만족해야 하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. \\(P(X=k) = \\frac{1}{6}\\) (\\(k=1,2,...,6\\)) - 주사위<br>ㄴ. \\(P(X=k) = {}_2C_k \\cdot (\\frac{1}{2})^2\\) (\\(k=0,1,2\\)) - 동전 2개<br>ㄷ. \\(P(X=k) = \\frac{k}{10}\\) (\\(k=1,2,3,4\\)) - 확률의 합=1 확인 필요</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-1] 확률질량함수의 정의를 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-2] 확률질량함수가 만족해야 하는 두 가지 조건을 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-3] 확률질량함수의 값은 어떤 의미인지 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]},
+          { id: 3, name: "Part3. 확률분포", questions: [
+            { question: "다음 중 하나를 골라 확률변수의 평균(기댓값)을 설명하시오.<br>[Q1] 확률변수의 평균은 어떻게 구하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전 2개를 던질 때 앞면 개수의 기댓값<br>ㄴ. 주사위를 던질 때 눈의 수의 기댓값<br>ㄷ. 복권 당첨금의 기댓값 (1등 100만원 확률 0.01, 꽝 확률 0.99)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 기댓값 공식 \\(E(X) = \\sum x_i P(X=x_i)\\)를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 기댓값이 '평균'이라 불리는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 주사위를 던질 때 눈의 수의 기댓값 3.5의 의미를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 분산을 설명하시오.<br>[Q2] 분산은 평균에서 얼마나 떨어졌는지를 어떻게 표현하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 항상 3이 나오는 경우 vs 1~6이 고르게 나오는 경우<br>ㄴ. 시험 점수가 모두 80점인 경우 vs 60~100점에 분포된 경우<br>ㄷ. 키가 비슷한 집단 vs 키 차이가 큰 집단</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] 분산 공식 \\(V(X) = E(X^2) - \\{E(X)\\}^2\\)를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] 분산이 클수록 어떤 의미인지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] 분산이 0이 되는 경우를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q3] 표준편차는 분산과 어떤 관계인지 설명하시오.", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 표준편차 공식 \\(\\sigma(X) = \\sqrt{V(X)}\\)를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] 표준편차를 사용하는 이유(분산 대신)를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 표준편차의 단위가 원래 자료와 같은 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q4] \\(aX+b\\)의 평균은 어떻게 구하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b> \\(E(aX+b) = aE(X) + b\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] \\(E(X) = 3\\)일 때, \\(E(2X+5)\\)를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] \\(E(aX+b) = aE(X) + b\\)가 성립하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] \\(E(X+Y) = E(X) + E(Y)\\)가 성립하는지 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q5] \\(aX+b\\)의 분산, 표준편차는 어떻게 구하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br>\\(V(aX+b) = a^2 V(X)\\)<br>\\(\\sigma(aX+b) = |a| \\sigma(X)\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] \\(V(X) = 4\\)일 때, \\(V(3X+2)\\)를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] 분산에서 상수 \\(b\\)가 사라지는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] \\(\\sigma(X) = 2\\)일 때, \\(\\sigma(-2X+3)\\)을 구하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 이항분포를 설명하시오.<br>[Q6] 이항분포는 어떤 조건에서 생기는 분포인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전을 10번 던질 때 앞면이 나오는 횟수<br>ㄴ. 불량률 0.1인 제품 5개 중 불량품의 개수<br>ㄷ. 자유투 성공률 0.8인 선수가 10번 던질 때 성공 횟수</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-1] 이항분포의 조건 4가지를 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-2] 이항분포를 기호 \\(B(n, p)\\)로 나타내는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-3] 이항분포가 아닌 경우의 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q7] 시행이 독립이라는 것은 무슨 뜻인지 설명하시오.", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-1] 복원추출이 독립시행인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-2] 비복원추출이 독립시행이 아닌 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-3] 각 시행의 성공 확률이 일정해야 하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q8] 이항분포에서 확률을 계산할 때 필요한 요소를 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b> \\(P(X=r) = {}_nC_r \\cdot p^r \\cdot (1-p)^{n-r}\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q8-1] 공식에서 \\({}_nC_r\\)이 필요한 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q8-2] 공식에서 \\(p^r\\)이 의미하는 바를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q8-3] 공식에서 \\((1-p)^{n-r}\\)이 의미하는 바를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q9] 이항분포의 평균과 분산은 어떻게 구하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br>\\(X \\sim B(n, p)\\)일 때,<br>\\(E(X) = np\\), \\(V(X) = np(1-p)\\), \\(\\sigma(X) = \\sqrt{np(1-p)}\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q9-1] \\(X \\sim B(10, 0.3)\\)일 때, \\(E(X)\\)와 \\(V(X)\\)를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q9-2] 이항분포의 평균이 \\(np\\)인 직관적 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q9-3] \\(p = 0.5\\)일 때 분산이 최대가 되는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 이항분포의 성질을 설명하시오.<br>[Q10] 이항분포는 항상 대칭인지, 아니라면 언제 대칭인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. \\(B(10, 0.5)\\) - 대칭<br>ㄴ. \\(B(10, 0.2)\\) - 왼쪽으로 치우침<br>ㄷ. \\(B(10, 0.8)\\) - 오른쪽으로 치우침</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q10-1] \\(p = 0.5\\)일 때 이항분포가 대칭인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q10-2] \\(n\\)이 커지면 이항분포의 모양이 어떻게 변하는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q10-3] 시행 횟수와 성공 확률이 분포 모양에 미치는 영향을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]}
+        ]
       }
     ];
 
