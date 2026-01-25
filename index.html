@@ -1428,6 +1428,149 @@
             }
           ]}
         ]
+      },
+      {
+        id: 8,
+        name: "Chapter 8. 연속확률변수와 정규분포",
+        chapterInfo: [
+          { partName: "Part1", description: "연속확률변수와 확률밀도함수", range: "Q1~Q5" },
+          { partName: "Part2", description: "정규분포", range: "Q1~Q6" },
+          { partName: "Part3", description: "표준정규분포", range: "Q1~Q7" }
+        ],
+        chapters: [
+          { id: 1, name: "Part1. 연속확률변수와 확률밀도함수", questions: [
+            { question: "다음 중 하나를 골라 확률이 「넓이」로 표현되는 이유를 설명하시오.<br>[Q1] 연속확률변수에서 확률이 넓이로 표현되는 이유를 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 키가 170cm~175cm인 사람의 비율 → 구간의 넓이<br>ㄴ. 버스 대기시간이 5분~10분일 확률 → 구간의 넓이<br>ㄷ. 전구 수명이 1000~1100시간일 확률 → 구간의 넓이</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 연속확률변수에서 점이 아닌 구간으로 확률을 구하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 이산확률변수와 연속확률변수의 확률 표현 방식 차이를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 확률밀도함수 아래 넓이가 확률인 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 \\(P(X=a)=0\\)인 이유를 설명하시오.<br>[Q2] 연속확률변수에서 \\(P(X=a)\\)는 왜 0인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 키가 정확히 170.000...cm인 사람의 확률<br>ㄴ. 버스가 정확히 5.000...분에 도착할 확률<br>ㄷ. 전구가 정확히 1000.000...시간에 고장날 확률</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] 선의 넓이가 0인 것과 \\(P(X=a)=0\\)의 관계를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] \\(P(X=a)=0\\)이지만 \\(X=a\\)가 불가능한 것은 아닌 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] \\(P(a \\leq X \\leq b) = P(a < X < b)\\)가 성립하는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 확률밀도함수를 설명하시오.<br>[Q3] 확률밀도함수는 무엇을 나타내는 함수인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 균등분포: \\(f(x) = \\frac{1}{b-a}\\) (\\(a \\leq x \\leq b\\))<br>ㄴ. 정규분포: 종 모양의 곡선<br>ㄷ. 지수분포: 감소하는 곡선</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 확률밀도함수의 정의를 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] 확률밀도함수의 값 \\(f(a)\\)는 확률이 아닌 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 확률밀도함수가 1보다 클 수 있는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 함수 아래 넓이의 의미를 설명하시오.<br>[Q4] 확률밀도함수 아래의 넓이는 어떤 의미인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. \\(\\int_a^b f(x)dx = P(a \\leq X \\leq b)\\)<br>ㄴ. 구간 [170, 175]의 넓이 = 키가 170~175cm일 확률<br>ㄷ. 구간 [5, 10]의 넓이 = 대기시간이 5~10분일 확률</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] 적분을 이용하여 확률을 구하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] 균등분포에서 \\(P(a \\leq X \\leq b)\\)를 넓이로 구하는 방법을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] 확률밀도함수의 그래프와 확률의 관계를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q5] 확률밀도함수의 전체 넓이는 얼마인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[조건]</b><br>① \\(f(x) \\geq 0\\) (모든 \\(x\\)에서)<br>② \\(\\int_{-\\infty}^{\\infty} f(x)dx = 1\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] 전체 넓이가 1인 이유를 전사건의 관점에서 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] 확률밀도함수가 만족해야 하는 두 가지 조건을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] \\(f(x) = kx\\) (\\(0 \\leq x \\leq 2\\))에서 상수 \\(k\\)를 구하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]},
+          { id: 2, name: "Part2. 정규분포", questions: [
+            { question: "다음 중 하나를 골라 정규분포의 모양을 설명하시오.<br>[Q1] 정규분포는 어떤 모양의 그래프인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 학생들의 키 분포 - 평균 근처에 많이 모임<br>ㄴ. 시험 점수 분포 - 종 모양<br>ㄷ. 제품의 무게 분포 - 좌우 대칭</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 정규분포 곡선의 특징을 3가지 이상 쓰시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 정규분포가 좌우 대칭인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 정규분포 곡선과 x축 사이의 넓이가 1인 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 평균이 그래프에 미치는 영향을 설명하시오.<br>[Q2] 평균을 중심으로 정규분포 그래프는 어떻게 생겼는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 평균=50인 분포 vs 평균=70인 분포 (위치 이동)<br>ㄴ. 평균=0인 분포 vs 평균=100인 분포 (중심 이동)<br>ㄷ. 남학생 평균 키 vs 여학생 평균 키 (분포 위치 차이)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] 평균이 바뀌면 그래프가 어떻게 변하는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] 평균이 그래프의 대칭축인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] 평균에서 확률밀도함수의 값이 최대인 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 표준편차가 그래프에 미치는 영향을 설명하시오.<br>[Q3] 표준편차를 바꾸면 정규분포 그래프에 어떤 변화가 생기는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. σ=1 vs σ=2 (넓이는 같지만 모양이 다름)<br>ㄴ. 표준편차 작음 → 뾰족하고 좁음 / 표준편차 큼 → 완만하고 넓음<br>ㄷ. 성적 편차 작은 반 vs 성적 편차 큰 반</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 표준편차가 커지면 그래프가 어떻게 변하는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] 표준편차가 달라도 그래프 아래 넓이는 1인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 표준편차가 0에 가까워지면 그래프가 어떻게 되는지 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q4] 정규분포를 기호 \\(N(\\mu, \\sigma^2)\\)로 나타내는 방법을 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br>ㄱ. \\(N(50, 10^2)\\): 평균 50, 표준편차 10<br>ㄴ. \\(N(170, 5^2)\\): 평균 170, 표준편차 5<br>ㄷ. \\(N(0, 1)\\): 평균 0, 표준편차 1 (표준정규분포)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] \\(X \\sim N(100, 25)\\)에서 평균과 표준편차를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] 기호에서 분산이 아닌 표준편차가 중요한 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] 두 정규분포 \\(N(50, 9)\\)와 \\(N(60, 9)\\)의 차이를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 정규분포의 성질을 설명하시오.<br>[Q5] 정규분포에서 평균을 기준으로 확률이 어떻게 분포하는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. \\(P(\\mu - \\sigma \\leq X \\leq \\mu + \\sigma) \\approx 0.68\\)<br>ㄴ. \\(P(\\mu - 2\\sigma \\leq X \\leq \\mu + 2\\sigma) \\approx 0.95\\)<br>ㄷ. \\(P(\\mu - 3\\sigma \\leq X \\leq \\mu + 3\\sigma) \\approx 0.997\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] 68-95-99.7 규칙을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] \\(N(100, 10^2)\\)에서 90~110 사이에 있을 확률을 추정하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] 평균에서 멀어질수록 확률이 작아지는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q6] 정규분포가 자연현상과 사회현상에서 자주 나타나는 이유를 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br>ㄱ. 키, 몸무게 등 신체 측정값<br>ㄴ. 시험 점수, IQ 점수<br>ㄷ. 제품의 규격, 측정 오차</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-1] 중심극한정리와 정규분포의 관계를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-2] 정규분포가 아닌 분포의 예를 들어 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-3] 정규분포가 통계학에서 중요한 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]},
+          { id: 3, name: "Part3. 표준정규분포", questions: [
+            { question: "다음 중 하나를 골라 표준정규분포를 따로 배우는 이유를 설명하시오.<br>[Q1] 표준정규분포는 왜 따로 배우는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 모든 정규분포를 하나의 표로 통일 가능<br>ㄴ. 계산과 비교가 편리함<br>ㄷ. 표준정규분포표 하나로 모든 확률 계산 가능</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-1] 정규분포마다 확률표를 만들면 어떤 문제가 생기는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-2] 표준정규분포로 통일하면 어떤 장점이 있는지 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q1-3] 다양한 정규분포를 비교하려면 표준화가 필요한 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 표준정규분포의 그래프를 설명하시오.<br>[Q2] 평균이 0이고 표준편차가 1인 그래프는 어떤 모습인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 중심이 0에 위치<br>ㄴ. \\(z = \\pm 1\\)에서 변곡점<br>ㄷ. \\(z = 0\\)에서 최댓값</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-1] \\(N(0, 1)\\)의 그래프를 그리고 특징을 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-2] 표준정규분포에서 \\(P(Z \\leq 0) = 0.5\\)인 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q2-3] 표준정규분포에서 \\(P(-1 \\leq Z \\leq 1) \\approx 0.68\\)임을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q3] 모든 정규분포를 표준정규분포(Z분포)로 바꿀 수 있는지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br>\\(X \\sim N(\\mu, \\sigma^2)\\)이면<br>\\(Z = \\frac{X - \\mu}{\\sigma} \\sim N(0, 1)\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-1] 표준화 공식 \\(Z = \\frac{X - \\mu}{\\sigma}\\)의 의미를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-2] \\(X \\sim N(50, 10^2)\\)일 때, \\(X=60\\)을 표준화하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q3-3] 표준화하면 평균이 0, 표준편차가 1이 되는 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 표준화가 필요한 이유를 설명하시오.<br>[Q4] 표준화는 왜 필요한 계산인지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 서로 다른 시험 점수 비교 (수학 80점 vs 영어 75점)<br>ㄴ. 서로 다른 단위의 데이터 비교<br>ㄷ. 표준정규분포표를 사용하기 위해</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-1] 평균 70, 표준편차 10인 시험에서 80점의 상대적 위치를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-2] 표준화 점수(z-score)의 의미를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q4-3] \\(z = 2\\)가 의미하는 바를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q5] 정규분포를 표준정규분포로 바꾸는 과정을 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br>\\(X \\sim N(100, 20^2)\\)에서 \\(P(X \\leq 120)\\) 구하기<br>→ \\(Z = \\frac{120-100}{20} = 1\\)<br>→ \\(P(Z \\leq 1)\\)을 표에서 찾기</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-1] \\(X \\sim N(50, 5^2)\\)에서 \\(P(X \\leq 60)\\)을 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-2] \\(X \\sim N(80, 10^2)\\)에서 \\(P(70 \\leq X \\leq 90)\\)을 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q5-3] 표준정규분포표를 읽는 방법을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 중 하나를 골라 이항분포와 정규분포의 관계를 설명하시오.<br>[Q6] 이항분포가 정규분포로 바뀌는 이유를 설명하시오. (라플라스 정리)<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br>ㄱ. 동전을 10번 vs 100번 vs 1000번 던질 때 분포 모양 변화<br>ㄴ. 시행 횟수가 많아지면 종 모양에 가까워짐<br>ㄷ. \\(n\\)이 충분히 크면 \\(B(n,p) \\approx N(np, np(1-p))\\)</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-1] 이항분포의 정규근사 조건 \\(np \\geq 5\\), \\(n(1-p) \\geq 5\\)를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-2] \\(X \\sim B(100, 0.5)\\)를 정규분포로 근사할 때 평균과 분산을 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q6-3] 이항분포를 정규분포로 근사하면 유리한 상황을 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            },
+            { question: "다음 문제에 대하여 설명하시오.<br>[Q7] 이항분포의 정규근사는 어떤 상황에서 유용한지 설명하시오.<br><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br>ㄱ. 동전을 1000번 던질 때 앞면이 490~510번 나올 확률<br>ㄴ. 불량률 1%인 제품 500개 중 불량품이 10개 이하일 확률<br>ㄷ. \\({1000}C_{500}\\) 같은 큰 조합 계산을 피할 수 있음</div>", answer: "", hint: "", explanation: "",
+              similarQuestions: [
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-1] 시행 횟수가 많으면 이항분포 계산이 어려운 이유를 설명하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-2] 정규근사를 이용하여 \\(B(100, 0.5)\\)에서 \\(P(45 \\leq X \\leq 55)\\)를 구하시오.", answer: "", hint: "", explanation: "" },
+                { question: "다음 문제에 대하여 설명하시오.<br>[Q7-3] 연속성 수정(continuity correction)이 필요한 이유를 설명하시오.", answer: "", hint: "", explanation: "" }
+              ]
+            }
+          ]}
+        ]
       }
     ];
 
