@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>확률과 통계 - 전체 문제 정리</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+@page {
+    size: A4;
+    margin: 2cm 1.8cm;
+}
+@page :first { margin-top: 0; }
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-size: 10pt;
+    line-height: 1.65;
+    color: #1a1a1a;
+    margin: 0; padding: 0;
+}
+
+/* 표지 */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 250px;
+}
+.cover h1 {
+    font-size: 36pt; font-weight: 800; color: #f97316;
+    margin-bottom: 12px;
+}
+.cover h2 {
+    font-size: 14pt; font-weight: 500; color: #666;
+    margin-bottom: 30px;
+}
+.cover p { font-size: 11pt; color: #999; }
+
+/* 목차 */
+.toc { page-break-after: always; }
+.toc h2 {
+    font-size: 16pt; font-weight: 700; color: #333;
+    border-bottom: 2px solid #f97316; padding-bottom: 6px; margin-bottom: 16px;
+}
+.toc-ch { font-weight: 700; color: #333; margin-top: 10px; font-size: 10.5pt; }
+.toc-pt { margin-left: 20px; color: #555; font-size: 9.5pt; margin-top: 3px; }
+
+/* 챕터 */
+.ch-title {
+    font-size: 18pt; font-weight: 800; color: #f97316;
+    border-bottom: 3px solid #f97316; padding-bottom: 6px;
+    margin-top: 0; margin-bottom: 10px;
+    page-break-before: always;
+}
+.pt-title {
+    font-size: 12pt; font-weight: 700; color: #333;
+    margin-top: 20px; margin-bottom: 8px;
+    padding: 6px 10px;
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+}
+
+/* 문제 블록 */
+.q-block {
+    margin: 8px 0;
+    padding: 8px 10px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+.q-main { font-weight: 500; }
+.sim-box {
+    margin-top: 6px; padding-left: 12px;
+    border-left: 2px solid #fed7aa;
+}
+.sim-label { font-size: 8pt; color: #f97316; font-weight: 600; margin-bottom: 2px; }
+.sim-q { font-size: 8.5pt; color: #555; margin: 2px 0; }
+
+img { max-width: 300px; }
+</style>
+</head>
+<body>
+
+
+<div class="cover">
+    <h1>확률과 통계</h1>
+    <h2>구두테스트 퀴즈 전체 문제 정리</h2>
+    <p>Chapter 1 ~ Chapter 9 | 메인 문제 192개 | 유사 문제 포함 총 768개</p>
+</div>
+
+<div class="toc"><h2>목차</h2>
+<div class="toc-ch">Chapter 1. 경우의 수</div>
+<div class="toc-pt">Part1. 덧셈 법칙 vs 곱셈 법칙 (8문제)</div>
+<div class="toc-pt">Part2. 순열 (9문제)</div>
+<div class="toc-pt">Part3. 조합 (17문제)</div>
+<div class="toc-ch">Chapter 2. 여러가지 순열</div>
+<div class="toc-pt">Part1. 중복순열 (10문제)</div>
+<div class="toc-pt">Part2. 같은 것이 있는 순열 (10문제)</div>
+<div class="toc-ch">Chapter 3. 중복조합</div>
+<div class="toc-pt">Part1. 중복조합 (10문제)</div>
+<div class="toc-pt">Part2. 경우의 수 구별해보기 (13문제)</div>
+<div class="toc-ch">Chapter 4. 이항정리</div>
+<div class="toc-pt">Part1. 이항정리의 정리 (5문제)</div>
+<div class="toc-pt">Part2. 이항정리의 성질 (11문제)</div>
+<div class="toc-ch">Chapter 5. 확률</div>
+<div class="toc-pt">Part1. 확률의 정의 (5문제)</div>
+<div class="toc-pt">Part2. 확률의 계산 (8문제)</div>
+<div class="toc-ch">Chapter 6. 조건부확률</div>
+<div class="toc-pt">Part1. 조건부확률 (4문제)</div>
+<div class="toc-pt">Part2. 곱셈정리 (5문제)</div>
+<div class="toc-pt">Part3. 독립과 종속 (10문제)</div>
+<div class="toc-pt">Part4. 독립시행의 확률 (5문제)</div>
+<div class="toc-ch">Chapter 7. 이산확률변수와 이항분포</div>
+<div class="toc-pt">Part1. 확률변수 (5문제)</div>
+<div class="toc-pt">Part2. 이산확률변수 (6문제)</div>
+<div class="toc-pt">Part3. 확률분포 (10문제)</div>
+<div class="toc-ch">Chapter 8. 연속확률변수와 정규분포</div>
+<div class="toc-pt">Part1. 연속확률변수와 확률밀도함수 (5문제)</div>
+<div class="toc-pt">Part2. 정규분포 (6문제)</div>
+<div class="toc-pt">Part3. 표준정규분포 (7문제)</div>
+<div class="toc-ch">Chapter 9. 모집단과 표본</div>
+<div class="toc-pt">Part1. 모집단과 표본 (15문제)</div>
+<div class="toc-pt">Part2. 모평균의 추정 (8문제)</div>
+</div>
+<h1 class="ch-title">Chapter 1. 경우의 수</h1>
+<div class="pt-title">Part1. 덧셈 법칙 vs 곱셈 법칙</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] 두 사건 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>가 동시에 일어나지 않을 때, <b style="color:#c2410c;">A</b> 또는 <b style="color:#c2410c;">B</b>가 일어나는 경우의 수를 구하는 법칙을 무엇이라 하는지 쓰고, 공식을 쓰시오. (예를 들어 설명해도 좋음)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 합의 법칙(덧셈 법칙)의 정의를 쓰고, 사건 <b style="color:#c2410c;">A</b>의 경우의 수가 <b style="color:#c2410c;">m</b>, 사건 <b style="color:#c2410c;">B</b>의 경우의 수가 <b style="color:#c2410c;">n</b>일 때 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 서로 배반인 두 사건에서 경우의 수를 구할 때 사용하는 법칙의 이름과 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 두 사건이 동시에 일어날 수 없을 때 적용하는 덧셈 법칙을 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 곱셈 법칙은 어떤 키워드가 나올 때 사용할까?</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] 곱의 법칙(곱셈 법칙)의 정의를 쓰고, 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] 사건 <b style="color:#c2410c;">A</b>의 경우의 수 <b style="color:#c2410c;">m</b>, 사건 <b style="color:#c2410c;">B</b>의 경우의 수 <b style="color:#c2410c;">n</b>일 때, 잇달아 일어나는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 두 사건이 연속하여 일어날 때 전체 경우의 수를 구하는 법칙을 쓰시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 1부터 30까지의 자연수 중에서 3의 배수 또는 5의 배수의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 1부터 20까지의 자연수 중에서 2의 배수 또는 3의 배수인 수의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 1부터 40까지의 자연수 중에서 4의 배수 또는 6의 배수인 수의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] 1부터 50까지의 자연수 중에서 5의 배수 또는 7의 배수인 수의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 서로 다른 두 개의 주사위를 동시에 던질 때, 눈의 수의 합이 5 또는 7이 되는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 서로 다른 두 개의 주사위를 동시에 던질 때, 눈의 수의 합이 4 또는 10이 되는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 두 개의 주사위를 던질 때, 눈의 수의 곱이 6 또는 12가 되는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 주사위 한 개를 던질 때, 나오는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 방정식 <b style="color:#c2410c;">x+2y=8</b>을 만족시키는 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>의 순서쌍 <b style="color:#c2410c;">(x, y)</b>의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 방정식 <b style="color:#c2410c;">x+y=6</b>을 만족시키는 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>의 순서쌍 <b style="color:#c2410c;">(x, y)</b>의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] 방정식 <b style="color:#c2410c;">2x+y=10</b>을 만족시키는 음이 아닌 정수 순서쌍의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] <b style="color:#c2410c;">x+y+z=5</b>를 만족하는 음이 아닌 정수해의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] <b style="color:#c2410c;">A</b>에서 <b style="color:#c2410c;">B</b>로 가는 길이 3가지, <b style="color:#c2410c;">B</b>에서 <b style="color:#c2410c;">C</b>로 가는 길이 4가지일 때, <b style="color:#c2410c;">A</b>에서 <b style="color:#c2410c;">C</b>까지 가는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 집에서 학교까지 버스 노선이 5개, 학교에서 도서관까지 지하철 노선이 3개 있을 때 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] <b style="color:#c2410c;">A</b>에서 <b style="color:#c2410c;">B</b>로 가는 방법 4가지, <b style="color:#c2410c;">B</b>에서 <b style="color:#c2410c;">C</b>로 가는 방법 2가지일 때의 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 서울에서 대전까지 KTX 5편, 대전에서 부산까지 KTX 3편이 있을 때 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 100원짜리 동전 4개, 50원짜리 동전 3개가 있을 때, 지불할 수 있는 서로 다른 금액의 가짓수를 구하시오. (단, 0원을 지불하는 것은 제외한다.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 500원 3개, 100원 5개로 지불할 수 있는 서로 다른 금액의 가짓수를 구하시오. (0원 제외)</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] 1000원권 2장, 5000원권 3장으로 만들 수 있는 금액의 종류를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 10원 4개, 50원 2개로 지불 가능한 금액의 가짓수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 집합 <b style="color:#c2410c;">A = {1, 2, 3}</b>, <b style="color:#c2410c;">B = {a, b, c, d}</b>에 대하여 <b style="color:#c2410c;">A</b>에서 <b style="color:#c2410c;">B</b>로의 함수의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] 원소가 2개인 집합에서 원소가 5개인 집합으로의 함수의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] <b style="color:#c2410c;">{1, 2, 3, 4}</b>에서 <b style="color:#c2410c;">{x, y, z}</b>로의 함수의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 집합 <b style="color:#c2410c;">X</b>의 원소가 3개, 집합 <b style="color:#c2410c;">Y</b>의 원소가 4개일 때, <b style="color:#c2410c;">X</b>에서 <b style="color:#c2410c;">Y</b>로의 함수의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 순열</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] <b style="color:#c2410c;">ₙPᵣ</b>과 <b style="color:#c2410c;">ᵣPₙ</b>의 의미는 각각 무엇이고 어떻게 계산할까? (예를 들어 설명해도 좋음)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 순열의 정의를 쓰고, <b style="color:#c2410c;">7</b>개에서 <b style="color:#c2410c;">3</b>개를 택하는 순열을 기호로 나타내시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] <b style="color:#c2410c;">ₙPᵣ</b>의 정의를 쓰고, <b style="color:#c2410c;">n</b>과 <b style="color:#c2410c;">r</b>이 의미하는 바를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 순열과 조합의 차이를 간단히 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">순열에 대하여 다음을 구하시오.<br/>[Q2] <b style="color:#c2410c;">ₙPᵣ = </b> (<b style="color:#c2410c;">n!</b>을 이용하여 나타내시오.)<br/><b style="color:#c2410c;">ₙPₙ = </b><br/><b style="color:#c2410c;">0! = </b><br/><b style="color:#c2410c;">ₙP₀ = </b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] <b style="color:#c2410c;">ₙPᵣ</b>을 팩토리얼을 이용하여 나타내시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] <b style="color:#c2410c;">ₙPᵣ = (n!)/((n-r)!)</b> 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] <b style="color:#c2410c;">0! = 1</b>인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 5명 중에서 회장, 부회장을 뽑는 경우의 수를 구하시오. (순열을 이용하여 구하시오.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 6명 중에서 1등, 2등, 3등을 뽑는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 8개 중 4개를 뽑아 일렬로 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] <b style="color:#c2410c;">₇P₂</b>를 계산하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 4개의 숫자 0, 1, 2, 3에서 서로 다른 3개의 숫자를 이용하여 만들 수 있는 세 자리 자연수의 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 0, 1, 2, 3, 4에서 3개를 택해 세 자리 자연수를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 1, 2, 3, 4, 5 중 3개로 세 자리 수를 만들 때, 짝수의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 0, 1, 2, 3, 4로 만들 수 있는 네 자리 자연수의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 다음 그림의 3개의 공간 A, B, C를 서로 다른 4가지의 색을 이용하여 칠하려고 한다. 같은 색은 중복하여 사용해도 좋으나 이웃한 영역은 서로 다른 색으로 칠할 수 있는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 일렬로 놓인 5개 영역을 4가지 색으로 칠할 때, 이웃한 영역이 다른 색인 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 3개 영역을 5가지 색으로 칠할 때 이웃한 영역이 서로 다른 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 4개 구역을 3가지 색으로 칠하되 인접한 구역은 다른 색으로 칠하는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] 4개의 숫자 0, 1, 2, 3에서 서로 다른 3개의 숫자를 이용하여 만들 수 있는 세 자리 자연수의 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 1, 2, 3, 4를 중복 사용하여 세 자리 수를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 0, 1, 2, 3을 중복하여 네 자리 자연수를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 5가지 숫자를 중복 사용하여 두 자리 수를 만드는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 남학생 3명과 여학생 2명을 일렬로 세울 때, 여자끼리 이웃하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 남학생 4명, 여학생 3명이 일렬로 설 때, 남학생끼리 이웃하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] A, B, C, D, E 5명이 일렬로 설 때, A와 B가 이웃하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 6명을 일렬로 세울 때, 특정 2명이 이웃하는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 남학생 3명과 여학생 2명을 일렬로 세울 때, 여자끼리 이웃하지 않는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] 5명을 일렬로 세울 때, 특정 2명이 이웃하지 않는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] 남학생 4명, 여학생 3명을 일렬로 세울 때, 여학생끼리 이웃하지 않는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] A, B를 포함한 6명이 일렬로 설 때, A와 B가 떨어져 있는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] 5명이 원탁에 둘러앉는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] 원순열의 공식을 쓰고, <b style="color:#c2410c;">n</b>명이 원탁에 앉는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] 6명이 원탁에 둘러앉는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] 원순열과 일반 순열의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part3. 조합</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q1] <b style="color:#c2410c;">ₙCᵣ</b>과 <b style="color:#c2410c;">ᵣCₙ</b>의 의미는 각각 무엇이고 어떻게 계산할까? (예를 들어 설명해도 좋음)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 조합의 정의를 쓰고, 8개 중 3개를 선택하는 것을 기호로 나타내시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] <b style="color:#c2410c;">ₙCᵣ</b>의 의미를 쓰고, 순열과의 차이점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 조합에서 순서를 고려하지 않는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">조합에 대하여 다음을 구하시오.<br/>[Q2] <b style="color:#c2410c;">ₙCᵣ = </b> (<b style="color:#c2410c;">n!</b>을 이용하여 나타내시오.)<br/><b style="color:#c2410c;">ₙCₙ = </b><br/><b style="color:#c2410c;">ₙC₀ = </b><br/><b style="color:#c2410c;">ₙC₁ = </b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] <b style="color:#c2410c;">ₙCᵣ</b>을 팩토리얼로 나타내시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] <b style="color:#c2410c;">ₙCᵣ = (n!)/(r!(n-r)!)</b> 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] <b style="color:#c2410c;">ₙCᵣ = ₙCₙ₋ᵣ</b>이 성립하는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 5명 중에서 회장, 부회장을 뽑는 경우의 수를 구하시오. (순열을 이용하여 구하시오.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 8명 중 3명의 대표를 뽑는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 10명 중 5명을 선택하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] <b style="color:#c2410c;">₇C₃</b>을 계산하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 남학생 4명, 여학생 3명 중에서 남학생 2명, 여학생 1명을 뽑는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 남학생 5명, 여학생 4명 중 남학생 3명, 여학생 2명을 뽑는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 빨강 공 4개, 파랑 공 3개에서 빨강 2개, 파랑 1개를 선택하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] A조 6명, B조 5명에서 A조 2명, B조 3명을 뽑는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 다음 그림의 3개의 공간 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>, <b style="color:#c2410c;">C</b>를 서로 다른 4가지의 색을 이용하여 칠하려고 한다. 같은 색은 중복하여 사용해도 좋으나 이웃한 영역은 서로 다른 색으로 칠할 수 있는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 4개 영역을 5가지 색으로 칠할 때, 이웃한 영역이 다른 색인 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] 3개 구역을 4가지 색 중 3가지를 선택하여 칠하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 인접한 영역을 다른 색으로 칠하는 문제에서 조합을 사용하는 경우를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] 서로 다른 두 개의 주사위를 굴릴 때, 두 주사위의 차가 10 이상인 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] <b style="color:#c2410c;">ₙC₃ = 35</b>일 때, <b style="color:#c2410c;">n</b>을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] <b style="color:#c2410c;">ₙC₂ = 28</b>일 때, <b style="color:#c2410c;">n</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] <b style="color:#c2410c;">ₙC₄ = 70</b>을 만족하는 <b style="color:#c2410c;">n</b>을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 방정식 <b style="color:#c2410c;">x+y+z=8</b>을 만족시키는 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>의 순서쌍 <b style="color:#c2410c;">(x, y, z)</b>의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] <b style="color:#c2410c;">x+y+z+w=10</b>의 음이 아닌 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] <b style="color:#c2410c;">a+b+c=6</b>을 만족하는 자연수 순서쌍의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 방정식의 정수해 개수를 중복조합으로 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 남학생 5명, 여학생 4명 중에서 4명을 뽑을 때, 남학생이 적어도 2명 포함되도록 하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] 10명 중 5명을 뽑을 때, 특정인 A가 반드시 포함되는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] 남학생 6명, 여학생 5명 중 5명을 뽑을 때, 여학생이 적어도 2명인 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] '적어도' 조건이 있는 조합 문제를 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] 서로 다른 10권의 책을 3명에게 각각 2권, 3권, 5권씩 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] 12명을 4명, 4명, 4명의 세 조로 나누는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] 9개를 3개, 3개, 3개로 나누는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] 같은 크기의 그룹으로 나눌 때와 다른 크기로 나눌 때의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] 8개의 서로 다른 점 중에서 3개를 선택하여 만들 수 있는 삼각형의 개수를 구하시오. (단, 어떤 세 점도 한 직선 위에 있지 않다.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] 10개의 점 중 4개를 선택하여 만드는 사각형의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] 평면 위의 6개 점에서 2개를 선택하여 만드는 직선의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 일직선상에 있지 않은 점들로 도형을 만드는 경우의 수를 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q11] 1부터 10까지의 자연수 중에서 서로 다른 3개를 선택할 때, 그 합이 짝수가 되는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-1] 1부터 8까지의 자연수 중 3개를 선택할 때, 합이 홀수인 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-2] 1부터 12까지 중 4개를 선택할 때, 곱이 짝수인 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-3] 홀수와 짝수를 이용하여 합이 짝수가 되는 조건을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q12] <b style="color:#c2410c;">ₙCᵣ₋₁ : ₙCᵣ : ₙCᵣ₊₁ = 1 : 3 : 5</b>이고 <b style="color:#c2410c;">n = 9</b>일 때, <b style="color:#c2410c;">r</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-1] <b style="color:#c2410c;">ₙC₂ : ₙC₃ = 2 : 5</b>일 때, <b style="color:#c2410c;">n</b>을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-2] <b style="color:#c2410c;">₈Cᵣ : ₈Cᵣ₊₁ = 3 : 5</b>일 때, <b style="color:#c2410c;">r</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-3] 조합의 비를 이용하여 미지수를 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q13] 1, 2, 3, 4, 5, 6을 한 번만 사용하여 만들 수 있는 세 자리 자연수의 개수를 구하시오. (조합을 이용하여 풀기)<br/><br/><img src="image_32.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-1] 1부터 5까지 숫자 중 3개를 선택하여 세 자리 수를 만들 때 조합을 이용하여 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-2] 서로 다른 숫자 5개 중 3개를 선택하는 방법과 배열하는 방법을 나누어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-3] 조합과 순열을 함께 사용하여 문제를 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q14] 다음 그림과 같은 6개의 점 중에서 임의로 2개의 점을 택하여 만들 수 있는 서로 다른 직선의 개수를 구하시오.<br/><br/><img src="image_33.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q14-1] 8개의 점에서 2개를 선택하여 만들 수 있는 직선의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q14-2] 평면 위의 10개 점에서 만들 수 있는 직선의 최대 개수를 구하시오. (일직선상에 있지 않음)</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q14-3] 일직선상에 3개, 따로 떨어진 4개 총 7개 점에서 만들 수 있는 직선의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q15] 다음 그림에서 점 6개 중에서 세 점을 이어 만들 수 있는 삼각형의 수를 구하시오.<br/><br/><img src="image_34.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q15-1] 원 위의 8개 점 중 3개를 선택하여 만들 수 있는 삼각형의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q15-2] 일직선상에 있지 않은 점들로 삼각형을 만들 때 주의할 점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q15-3] 반원 위의 점들로 삼각형을 만들 때 모든 삼각형이 가능한 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q16] 정육각형 대각선의 개수는?<br/><br/><img src="image_35.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q16-1] 정오각형의 대각선의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q16-2] 정<b style="color:#c2410c;">n</b>각형의 대각선의 개수를 구하는 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q16-3] 정팔각형의 대각선의 개수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q17] 다음 그림과 같이 5개의 평행한 가로선과 3개의 평행한 세로선이 서로 만날 때, 이 평행선으로 만들어지는 평행사변형의 개수를 구하시오.<br/><br/><img src="image_36.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q17-1] 4개의 평행한 가로선과 4개의 평행한 세로선으로 만들어지는 평행사변형의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q17-2] <b style="color:#c2410c;">m</b>개의 평행선과 <b style="color:#c2410c;">n</b>개의 평행선이 만날 때 평행사변형의 개수를 구하는 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q17-3] 6개의 평행선과 5개의 평행선으로 만들 수 있는 평행사변형의 개수를 구하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 2. 여러가지 순열</h1>
+<div class="pt-title">Part1. 중복순열</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] 다음 4가지 상황 중 중복순열에 해당하는 것 2가지를 고르고, 각각 왜 중복순열인지 설명하시오.<br/><br/>A) 1, 2, 3으로 세 자리 수 만들기 (같은 숫자 중복 사용 가능)<br/>B) 5명 중 3명을 뽑아 일렬로 세우기<br/>C) 1, 2, 3으로 세 자리 수 만들기 (같은 숫자 중복 불가)<br/>D) 주사위를 2번 던지기</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 중복순열의 정의를 쓰고, 일반 순열과의 차이점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 숫자 1, 2, 3으로 두 자리 수를 만드는 경우를 예시로 중복순열을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 중복을 허용한다는 의미를 구체적으로 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 다음 4가지 상황 중 중복순열을 사용해야 하는 것 2가지를 고르고, 각각 그 이유를 설명하시오.<br/><br/>A) 0~9 숫자로 4자리 비밀번호 만들기 (숫자 중복 가능)<br/>B) 10명 중 3명의 대표를 뽑기<br/>C) 동전을 3번 던지기<br/>D) 5권의 책 중 3권을 선택하여 책꽂이에 꽂기</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] 중복순열이 사용되는 실생활 예시 3가지를 제시하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] 비밀번호 만들기 문제에서 중복순열이 사용되는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 주사위를 여러 번 던지는 경우가 중복순열인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 중복순열에 빈 것이 가능하다는 말이 필요한 이유는 무엇인가? (예: 0이 포함된 경우 등)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 0, 1, 2로 세 자리 자연수를 만들 때 주의할 점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 빈 것이 가능하다는 조건이 있을 때와 없을 때의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] 중복순열에서 0을 포함한 자연수를 만드는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 1, 2, 3, 4 중 서로 다른 3개의 숫자를 택해 세 자리 비밀번호를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 1, 2, 3, 4, 5 중 서로 다른 3개를 선택하여 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 6개 숫자 중 4개를 중복 없이 선택하여 비밀번호를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 일반 순열 <b style="color:#c2410c;">ₙPᵣ</b>의 의미를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 1, 2, 3, 4 중 중복을 허용하여 세 자리 비밀번호를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 0, 1, 2, 3을 중복 사용하여 네 자리 비밀번호를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] 5가지 숫자를 중복 허용하여 두 자리 수를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 중복순열 <b style="color:#c2410c;">nʳ</b>의 공식을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] A, A, B를 나열하는 경우의 수는 <b style="color:#c2410c;">3! = 6</b>이 아니라 <b style="color:#c2410c;">3</b>이다. 왜 일반 순열보다 경우의 수가 적은지 AAB, ABA, BAA 세 가지를 예로 들어 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] A, A, B를 나열하는 경우의 수가 <b style="color:#c2410c;">3!</b>이 아닌 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 같은 문자가 포함되었을 때 경우의 수가 줄어드는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] AABB를 나열하는 경우의 수를 구하고, <b style="color:#c2410c;">4!</b>과 다른 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] A, A, A, B, C를 나열하는 경우의 수를 구하는 두 가지 방법을 각각 설명하시오.<br/>(방법1: 공식 사용, 방법2: 단계적으로 위치 정하기)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 같은 것이 있는 순열 공식 <b style="color:#c2410c;">(n!)/(p!q!)</b>을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] A, A, A, B, C를 나열하는 두 가지 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 같은 것이 여러 종류 있을 때의 순열 공식을 쓰시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] A, A, A, B, C를 나열하는 경우의 수를 구하시오. (같은 것이 있는 순열을 구하는 두 가지 방법으로 각각 구하시오.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] A, A, B, B, C를 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] A, A, A, A, B를 나열하는 경우의 수를 두 가지 방법으로 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] 1, 1, 2, 2, 3을 나열하는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] 1, 2, 3, 4, 5를 일렬로 나열할 때, 1, 3, 5는 반드시 크기 순서대로(증가 순서) 나타나야 한다. 이런 조건이 있을 때 경우의 수를 구하는 방법을 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] 특정 순서가 고정되어 있을 때 경우의 수를 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] 1, 2, 3, 4, 5를 나열할 때 홀수는 증가순으로 배열하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] 순서가 정해진 원소들을 하나의 그룹으로 보는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] 1, 2, 3, 4, 5, 6을 나열할 때 홀수는 크기 순서대로 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] 1, 2, 3, 4, 5를 나열할 때 1, 3, 5는 증가 순서대로 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] 1~7을 나열할 때 홀수는 오름차순, 짝수는 내림차순으로 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] A, B, C, D를 나열할 때 A, C는 순서 유지하는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 같은 것이 있는 순열</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] 1, 2, 3, 4, 5, 6을 나열할 때 홀수는 크기 순서대로 나열하고, 2는 4 왼쪽에 오도록 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 1~5를 나열할 때 홀수는 증가 순서, 2는 4 왼쪽에 오는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 여러 조건이 동시에 주어졌을 때 푸는 순서를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] A, B, C, D를 나열할 때 A는 B 왼쪽, C는 D 왼쪽인 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 격자에서 오른쪽으로 3칸, 위로 2칸 가는 최단 거리의 경우의 수를 조합을 이용하여 구하고, 왜 조합을 사용하는지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] 격자에서 (0,0)에서 (3,2)로 가는 최단 경로를 조합으로 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] 오른쪽(R) 4번, 위(U) 3번 이동하는 경우의 수를 조합으로 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 최단 경로에서 조합을 사용하는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 격자에서 오른쪽으로 3칸, 위로 2칸 가는 최단 거리의 경우의 수를 같은 것이 있는 순열을 이용하여 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 오른쪽 3칸, 위 2칸을 RRRUU로 표현하여 같은 것이 있는 순열로 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 같은 것이 있는 순열로 최단 경로를 구하는 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] 조합 방법과 같은 것이 있는 순열 방법이 같은 답이 나오는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] (0,0)에서 (3,2)로 가는데 중간에 (1,1) 지점에 장애물이 있어 지나갈 수 없다. 이때 최단 경로의 수를 구하는 방법 2가지를 설명하시오.<br/>(방법1: 전체에서 빼기, 방법2: 경로를 나누어 계산)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 중간에 지나갈 수 없는 점이 있을 때 경로의 수를 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 장애물이 있을 때 전체 경로에서 빼는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 특정 점을 반드시 지나가는 경로의 수를 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 오른쪽 그림과 같은 도로망에서 A 지점에서 B 지점까지 최단 거리로 가는 경우의 수를 구하시오.<br/><br/><img src="image_37.png" style="max-width:300px; margin:8px 0; display:block;"></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 격자 도로에서 오른쪽 4칸, 위 3칸 이동하는 최단 경로의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] (0,0)에서 (5,3)까지 최단 경로로 가는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 가로 3칸, 세로 2칸 격자에서 A에서 B까지 최단 경로를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] MISSISSIPPI의 11개 문자를 일렬로 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] MATHEMATICS의 문자를 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] BANANA를 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 같은 문자가 여러 종류 있을 때의 순열 공식을 쓰시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 빨강 공 3개, 파랑 공 2개, 노랑 공 1개를 일렬로 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 빨강 4개, 파랑 2개를 일렬로 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] 서로 다른 3종류의 공을 배열할 때 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 1, 1, 1, 2, 2, 3을 나열하는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 0, 0, 1, 1, 2, 3의 6개 숫자를 모두 사용하여 만들 수 있는 여섯 자리 자연수의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] 0, 1, 1, 2, 2, 3으로 여섯 자리 자연수를 만드는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] 0이 포함된 숫자로 자연수를 만들 때 주의할 점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] 1, 1, 2, 2, 3, 3으로 여섯 자리 수를 만드는 경우의 수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] SUCCESS를 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] APPLE을 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] COFFEE를 나열하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] 단어를 나열할 때 같은 문자가 몇 개인지 세는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] 1, 1, 2, 2, 3, 3을 일렬로 나열할 때, 같은 숫자끼리 이웃하도록 배열하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] A, A, B, B, C, C를 나열할 때 같은 문자끼리 붙어있는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] 3쌍의 숫자를 쌍끼리 이웃하게 배열하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 같은 것끼리 묶어서 배열하는 문제의 풀이 방법을 설명하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 3. 중복조합</h1>
+<div class="pt-title">Part1. 중복조합</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] 중복조합이란 무엇이고, 언제 사용하는가? 중복조합과 조합의 차이를 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 중복조합의 정의를 쓰고, <b style="color:#c2410c;">ₙHᵣ</b>의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 중복조합과 일반 조합의 차이점을 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 중복을 허용하여 선택하는 상황을 2가지 예시로 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 중복조합 <b style="color:#c2410c;">₃H₅</b>를 편하게 계산하기 위해 조합으로 바꾸는 공식을 쓰고, 그 이유를 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] <b style="color:#c2410c;">ₙHᵣ = ₙ₊ᵣ₋₁Cᵣ</b> 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] <b style="color:#c2410c;">₄H₃</b>을 조합으로 바꾸어 계산하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 중복조합을 조합으로 바꾸면 계산이 쉬워지는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 서로 같은 사탕 5개를 서로 다른 상자 3개에 넣는 방법의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] 같은 공 6개를 서로 다른 상자 4개에 넣는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 동일한 연필 4자루를 3명에게 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] 같은 것을 서로 다른 곳에 배치하는 문제가 중복조합인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 부정방정식 문제를 풀 때 반드시 체크해야 하는 두 가지 요소는 무엇인가?</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 부정방정식에서 '음이 아닌 정수'와 '양의 정수'의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 부정방정식에서 변수의 범위 조건이 중요한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 부정방정식 문제에서 확인해야 할 것들을 순서대로 나열하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 방정식 <b style="color:#c2410c;">x+y+z=8</b>을 만족시키는 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>에 대한 조건이 다음과 같을 때 순서쌍 <b style="color:#c2410c;">(x, y, z)</b>의 개수를 구하시오.<br/>① 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b><br/>② <b style="color:#c2410c;">x ≥ 2</b>, <b style="color:#c2410c;">y ≥ 1</b>, <b style="color:#c2410c;">z ≥ 1</b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 방정식 <b style="color:#c2410c;">x+y+z=10</b>의 음이 아닌 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] 방정식 <b style="color:#c2410c;">x+y+z=7</b>에서 <b style="color:#c2410c;">x ≥ 1</b>, <b style="color:#c2410c;">y ≥ 2</b>, <b style="color:#c2410c;">z ≥ 1</b>인 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 변수 치환을 이용하여 조건이 있는 부정방정식을 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] 방정식 <b style="color:#c2410c;">x+y+2z=6</b>을 만족시키는 양의 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>에 대하여 순서쌍 <b style="color:#c2410c;">(x, y, z)</b>의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 방정식 <b style="color:#c2410c;">x+2y+z=8</b>의 양의 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 방정식 <b style="color:#c2410c;">2x+y+z=10</b>의 음이 아닌 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 계수가 1이 아닌 부정방정식을 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 방정식 <b style="color:#c2410c;">x+y+z=6</b>을 만족하는 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>의 순서쌍 <b style="color:#c2410c;">(x, y, z)</b>의 개수를 구하시오. (단, <b style="color:#c2410c;">x ≤ 1</b>, <b style="color:#c2410c;">y ≥ 1</b>, <b style="color:#c2410c;">z ≥ 1</b>)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 방정식 <b style="color:#c2410c;">x+y+z=5</b>에서 <b style="color:#c2410c;">x ≤ 2</b>, <b style="color:#c2410c;">y ≥ 0</b>, <b style="color:#c2410c;">z ≥ 1</b>인 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] 상한 조건(<b style="color:#c2410c;">x ≤ k</b>)이 있는 부정방정식을 푸는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 여러 조건이 섞인 부정방정식을 단계적으로 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 부등식 <b style="color:#c2410c;">x+y+z ≤ 5</b>를 만족하는 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>의 순서쌍 <b style="color:#c2410c;">(x, y, z)</b>의 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] 부등식 <b style="color:#c2410c;">x+y+z ≤ 6</b>의 음이 아닌 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] 부등식 <b style="color:#c2410c;">x+y ≤ 4</b>를 만족하는 자연수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>의 순서쌍 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] 부등식을 등식으로 바꾸어 푸는 방법(더미 변수)을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] 사과, 배, 귤 중 중복을 허용하여 4개를 선택하는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] 3종류의 음료 중 중복을 허용하여 5개를 선택하는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] 4종류의 과자 중 중복을 허용하여 3개를 사는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] 여러 종류에서 중복 선택하는 문제가 중복조합인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] 방정식 <b style="color:#c2410c;">x+y+z+w=10</b>을 만족하는 음이 아닌 정수 <b style="color:#c2410c;">x</b>, <b style="color:#c2410c;">y</b>, <b style="color:#c2410c;">z</b>, <b style="color:#c2410c;">w</b>의 순서쌍 개수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] 방정식 <b style="color:#c2410c;">a+b+c+d=8</b>의 음이 아닌 정수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] 방정식 <b style="color:#c2410c;">x₁+x₂+x₃+x₄+x₅=12</b>의 자연수해의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 변수가 4개 이상인 부정방정식도 중복조합으로 해결할 수 있는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 경우의 수 구별해보기</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] <b style="color:#c2410c;">ₙHᵣ</b>과 <b style="color:#c2410c;">ᵣHₙ</b>은 어떻게 구별해야 하는가? 각각의 의미를 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] <b style="color:#c2410c;">₃H₅</b>와 <b style="color:#c2410c;">₅H₃</b>의 차이를 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 중복조합에서 n과 r의 의미를 명확히 구분하여 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] 사과 3종류에서 5개 선택 vs 사과 5종류에서 3개 선택의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 다음 부등식을 만족하는 정수 <b style="color:#c2410c;">a</b>, <b style="color:#c2410c;">b</b>, <b style="color:#c2410c;">c</b>의 순서쌍 <b style="color:#c2410c;">(a, b, c)</b>의 개수를 각각 구하고, 그 차이를 설명하시오.<br/>① <b style="color:#c2410c;">1 ≤ a ≤ b ≤ c ≤ 5</b><br/>② <b style="color:#c2410c;">1 ≤ a < b ≤ c ≤ 5</b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] <b style="color:#c2410c;">1 ≤ a ≤ b ≤ c ≤ 4</b>를 만족하는 순서쌍의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] <b style="color:#c2410c;">1 ≤ a < b < c ≤ 5</b>를 만족하는 순서쌍의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 부등호 <b style="color:#c2410c;">≤</b>와 <b style="color:#c2410c;"><</b>의 차이가 경우의 수에 미치는 영향을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] 다음 부등식을 만족하는 정수 <b style="color:#c2410c;">a</b>, <b style="color:#c2410c;">b</b>, <b style="color:#c2410c;">c</b>의 순서쌍 <b style="color:#c2410c;">(a, b, c)</b>의 개수를 구하고, Q2의 ①번과 비교하여 설명하시오.<br/><b style="color:#c2410c;">1 ≤ |a| ≤ |b| ≤ |c| ≤ 5</b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] <b style="color:#c2410c;">1 ≤ |x| ≤ |y| ≤ 3</b>을 만족하는 정수 순서쌍의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 절댓값이 포함된 부등식 문제를 푸는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] 양수와 음수를 모두 고려해야 하는 경우의 수 문제 풀이법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] 두 집합 <b style="color:#c2410c;">X = {1, 2, 3}</b>, <b style="color:#c2410c;">Y = {4, 5, 6, 7, 8}</b>에 대하여 주어진 조건을 만족하는 <b style="color:#c2410c;">X</b>에서 <b style="color:#c2410c;">Y</b>로의 함수의 개수를 구하시오.<br/>① <b style="color:#c2410c;">X</b>에서 <b style="color:#c2410c;">Y</b>로의 함수<br/>② <b style="color:#c2410c;">xᵢ ≠ x_j</b>이면 <b style="color:#c2410c;">f(xᵢ) ≠ f(x_j)</b><br/>③ <b style="color:#c2410c;">xᵢ < x_j</b>이면 <b style="color:#c2410c;">f(xᵢ) < f(x_j)</b><br/>④ <b style="color:#c2410c;">xᵢ < x_j</b>이면 <b style="color:#c2410c;">f(xᵢ) ≤ f(x_j)</b></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] 집합 <b style="color:#c2410c;">A = {1,2,3,4}</b>에서 <b style="color:#c2410c;">B = {5,6,7,8,9,10}</b>으로의 4가지 함수 조건 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] 일반함수, 일대일함수, 순증가함수, 비감소함수를 각각 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 함수의 각 조건에 따라 중복순열, 순열, 조합, 중복조합 중 어느 것을 사용하는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] 다음 4가지 상황을 중복순열, 순열, 중복조합, 조합 중 어느 것으로 풀어야 하는지 각각 판단하고 그 이유를 설명하시오.<br/><br/>A) 5명 중 3명을 뽑아 일렬로 세우기<br/>B) 3종류 과일에서 중복을 허용하여 5개 선택<br/>C) 1,2,3 숫자로 비밀번호 4자리 만들기 (중복 가능)<br/>D) 10명 중 3명의 대표 선출</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] 순서를 고려하는지 여부로 순열/조합을 구분하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] 중복을 허용하는지 여부로 경우의 수 계산법이 어떻게 달라지는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 4가지 경우의 수(중복순열, 순열, 중복조합, 조합)를 구분하는 기준을 표로 정리하여 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] 방정식 <b style="color:#c2410c;">x+y+z=6</b>과 부등식 <b style="color:#c2410c;">x+y+z ≤ 6</b>의 음이 아닌 정수해 개수를 각각 구하고, 두 문제의 풀이 방법 차이를 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 등식과 부등식 부정방정식의 차이점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 부등식을 등식으로 변환하는 방법(더미 변수 추가)을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] <b style="color:#c2410c;">x+y ≤ 5</b>를 <b style="color:#c2410c;">x+y+w=5</b>로 바꾸는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 다음 각 상황이 어떤 경우의 수 유형인지 판단하고, 그 개수를 구하는 공식을 쓰시오.<br/><br/>A) <b style="color:#c2410c;">n</b>개 중 <b style="color:#c2410c;">r</b>개를 뽑아 순서대로 배열<br/>B) <b style="color:#c2410c;">n</b>개 중 <b style="color:#c2410c;">r</b>개를 선택 (순서 무관)<br/>C) <b style="color:#c2410c;">n</b>종류에서 중복 허용하여 <b style="color:#c2410c;">r</b>개 선택<br/>D) <b style="color:#c2410c;">n</b>가지 중 중복 허용하여 <b style="color:#c2410c;">r</b>번 선택</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] <b style="color:#c2410c;">ₙPᵣ</b>, <b style="color:#c2410c;">ₙCᵣ</b>, <b style="color:#c2410c;">ₙHᵣ</b>, <b style="color:#c2410c;">nʳ</b>을 각각 언제 사용하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] 경우의 수 4대 공식의 차이점을 표로 정리하여 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 문제를 읽고 어떤 공식을 사용할지 판단하는 기준을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] 중복순열과 중복조합을 구분하는 3가지 키워드를 말하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] 중복순열에서 확인해야 할 키워드 2가지를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] 중복조합에서 확인해야 할 키워드 2가지를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] '중복', '순서', '선택'이 경우의 수 유형에 미치는 영향을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] 중복순열과 중복조합의 공통점과 차이점을 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] 중복순열과 중복조합의 공통점을 2가지 이상 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] 중복순열과 중복조합이 다른 핵심 차이점을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] <b style="color:#c2410c;">nʳ</b>과 <b style="color:#c2410c;">ₙHᵣ</b>의 값이 다른 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] 서로 다른 4개의 초콜릿을 3명에게 나누어 주는 경우의 수를 구하시오. (단, 하나도 못 받는 사람이 있을 수 있다)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] 서로 다른 5개의 사탕을 4명에게 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] 서로 다른 3개의 선물을 2명에게 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 서로 다른 물건을 사람들에게 나누어 주는 문제가 중복순열인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q11] 서로 같은 5개의 사탕을 3명에게 나누어 주는 경우의 수를 구하시오. (단, 하나도 못 받는 사람이 있을 수 있다)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-1] 서로 같은 6개의 공을 4명에게 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-2] 같은 물건 8개를 2명에게 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-3] 같은 물건을 사람들에게 나누어 주는 문제가 중복조합인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q12] 서로 다른 4개의 공을 서로 다른 3개의 주머니에 나누어 담는 경우의 수를 구하시오. (단, 빈 주머니가 없어야 한다)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-1] 서로 다른 5개의 구슬을 서로 다른 3개의 상자에 나누어 담는 경우의 수를 구하시오. (빈 상자 없어야 함)</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-2] 서로 다른 6개의 책을 서로 다른 4개의 서랍에 나누어 담는 경우의 수를 구하시오. (빈 서랍 없어야 함)</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q12-3] '빈 주머니가 없어야 한다'는 조건이 있을 때와 없을 때의 풀이 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q13] 서로 같은 6개의 공을 서로 다른 2개의 주머니에 각각 3개씩 나누어 담는 경우의 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-1] 서로 같은 8개의 구슬을 서로 다른 2개의 상자에 각각 4개씩 담는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-2] 서로 같은 10개의 사탕을 서로 다른 2명에게 각각 5개씩 나누어 주는 경우의 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q13-3] '각각 정해진 개수씩' 나누어 담는 조건이 있을 때의 풀이 방법을 설명하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 4. 이항정리</h1>
+<div class="pt-title">Part1. 이항정리의 정리</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] 이항정리와 이항계수의 정의를 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] 이항정리의 일반항을 쓰고 그 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 이항계수 <b style="color:#c2410c;">ₙCᵣ</b>이 이항정리에서 어떤 역할을 하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] <b style="color:#c2410c;">(a+b)ⁿ</b>을 전개했을 때 항의 개수와 각 항의 구조를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] 이항정리를 어떤 상황에서 사용하는지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] 이항정리를 이용하여 특정 항의 계수를 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] 이항정리를 실생활에서 어떻게 활용할 수 있는지 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] 이항정리와 조합의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] <b style="color:#c2410c;">(a+b)⁵</b>에서 <b style="color:#c2410c;">a²b³</b>의 계수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] <b style="color:#c2410c;">(a+b)⁶</b>에서 <b style="color:#c2410c;">a³b³</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] <b style="color:#c2410c;">(a+b)⁴</b>에서 <b style="color:#c2410c;">ab³</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] <b style="color:#c2410c;">(x+y)⁷</b>에서 <b style="color:#c2410c;">x⁴y³</b>의 계수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] <b style="color:#c2410c;">5x²(1+2x)⁴</b>에서 <b style="color:#c2410c;">x⁴</b>의 계수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] <b style="color:#c2410c;">3x(1+x)⁵</b>에서 <b style="color:#c2410c;">x³</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] <b style="color:#c2410c;">2x³(1+3x)⁴</b>에서 <b style="color:#c2410c;">x⁵</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] <b style="color:#c2410c;">4x²(2+x)³</b>에서 <b style="color:#c2410c;">x⁴</b>의 계수를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] <b style="color:#c2410c;">(1+2x)³(2-x²)³</b>에서 <b style="color:#c2410c;">x⁵</b>의 계수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] <b style="color:#c2410c;">(1+x)⁴(1-x)⁴</b>에서 <b style="color:#c2410c;">x⁴</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] <b style="color:#c2410c;">(1+x)³(2+x)³</b>에서 <b style="color:#c2410c;">x³</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] 두 이항식의 곱에서 특정 항의 계수를 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 이항정리의 성질</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q1] <b style="color:#c2410c;">(a+b)ⁿ</b>의 전개식에서 항의 개수를 말하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-1] <b style="color:#c2410c;">(a+b)¹⁰</b>을 전개했을 때 항의 개수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-2] 이항정리로 전개한 식에서 항의 개수가 <b style="color:#c2410c;">n+1</b>개인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q1-3] <b style="color:#c2410c;">(a+b)ⁿ</b>과 <b style="color:#c2410c;">(a+b+c)ⁿ</b>의 항의 개수 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q2] <b style="color:#c2410c;">ₙC₀ + ₙC₁ + ₙC₂ + ·s + ₙCₙ</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-1] <b style="color:#c2410c;">₅C₀ + ₅C₁ + ₅C₂ + ₅C₃ + ₅C₄ + ₅C₅</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-2] 이항계수의 합이 <b style="color:#c2410c;">2ⁿ</b>이 되는 이유를 이항정리를 이용하여 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q2-3] <b style="color:#c2410c;">(1+1)ⁿ</b>을 전개하여 이항계수의 합을 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q3] <b style="color:#c2410c;">ₙC₀ - ₙC₁ + ₙC₂ - ₙC₃ + ·s + (-1)ⁿₙCₙ</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-1] <b style="color:#c2410c;">₄C₀ - ₄C₁ + ₄C₂ - ₄C₃ + ₄C₄</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-2] 교대로 부호가 바뀌는 이항계수의 합이 0이 되는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q3-3] <b style="color:#c2410c;">(1-1)ⁿ</b>을 이용하여 교대 이항계수의 합을 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q4] <b style="color:#c2410c;">(a+b)ⁿ</b> 전개식에서 짝수 번째 항의 합과 홀수 번째 항의 합을 각각 어떻게 구하는지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-1] <b style="color:#c2410c;">(a+b)⁶</b> 전개식에서 홀수 번째 항의 합을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-2] <b style="color:#c2410c;">(a+b)ⁿ</b>과 <b style="color:#c2410c;">(a-b)ⁿ</b>을 더하고 빼서 짝수/홀수 번째 항의 합을 구하는 원리를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q4-3] 짝수 번째 항의 합과 홀수 번째 항의 합이 같은 경우는 언제인지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q5] <b style="color:#c2410c;">(a+b)ⁿ</b> 전개식과 <b style="color:#c2410c;">(a-b)ⁿ</b> 전개식의 차이점을 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-1] <b style="color:#c2410c;">(x+y)⁴</b>와 <b style="color:#c2410c;">(x-y)⁴</b>를 각각 전개하고 차이를 비교하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-2] <b style="color:#c2410c;">(a-b)ⁿ</b>에서 부호가 바뀌는 규칙을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q5-3] n이 짝수일 때와 홀수일 때 <b style="color:#c2410c;">(a-b)ⁿ</b>의 마지막 항 부호를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q6] 파스칼의 삼각형이 무엇인지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-1] 파스칼의 삼각형의 5번째 행까지 쓰고 이항계수와의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-2] 파스칼의 삼각형을 이용하여 <b style="color:#c2410c;">(a+b)⁴</b>의 계수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q6-3] 파스칼의 삼각형이 이항정리와 어떤 관련이 있는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q7] 파스칼의 삼각형의 성질에 대하여 다음 빈칸을 채우시오.<br/>① 각 행의 양 끝은 항상 _____이다.<br/>② <b style="color:#c2410c;">n</b>번째 행의 왼쪽에서 두 번째 수와 오른쪽에서 두 번째 수는 모두 _____이다.<br/>③ 각 단계의 수는 그 위 단계의 _____의 합과 같다.<br/>④ 각 단계의 수 배열이 _____ 대칭이다.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-1] 파스칼의 삼각형에서 대칭 성질이 나타나는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-2] 파스칼의 삼각형에서 <b style="color:#c2410c;">ₙCᵣ = ₙ₋₁Cᵣ₋₁ + ₙ₋₁Cᵣ</b> 관계식을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q7-3] 파스칼의 삼각형의 각 행의 합이 어떤 규칙을 따르는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q8] <b style="color:#c2410c;">ₙC₀ + 2 · ₙC₁ + 2² · ₙC₂ + ·s + 2ⁿ · ₙCₙ = 3⁶</b>일 때 <b style="color:#c2410c;">n</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-1] <b style="color:#c2410c;">ₙC₀ + 3 · ₙC₁ + 3² · ₙC₂ + ·s + 3ⁿ · ₙCₙ = 4⁵</b>일 때 <b style="color:#c2410c;">n</b>을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-2] <b style="color:#c2410c;">(1+x)ⁿ</b>에 <b style="color:#c2410c;">x=k</b>를 대입하여 가중 이항계수의 합을 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q8-3] <b style="color:#c2410c;">ₙC₀ + r · ₙC₁ + r² · ₙC₂ + ·s + rⁿ · ₙCₙ</b>을 간단히 나타내시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q9] <b style="color:#c2410c;">₅C₀ + ₅C₁ + ·s + ₅C₄</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-1] <b style="color:#c2410c;">₆C₀ + ₆C₁ + ·s + ₆C₅</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-2] <b style="color:#c2410c;">ₙC₀ + ₙC₁ + ·s + ₙCₙ₋₁</b>을 간단히 나타내시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q9-3] <b style="color:#c2410c;">₅C₀ + ₅C₁ + ·s + ₅C₄</b>와 <b style="color:#c2410c;">₅C₅</b>의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q10] <b style="color:#c2410c;">₃C₀ + ₄C₁ + ₅C₂ + ₆C₃</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-1] <b style="color:#c2410c;">₄C₀ + ₅C₁ + ₆C₂ + ₇C₃</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-2] <b style="color:#c2410c;">₂C₀ + ₃C₁ + ₄C₂</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q10-3] 파스칼의 삼각형의 대각선 합 성질을 이용하여 문제를 푸는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하여라.<br/>[Q11] <b style="color:#c2410c;">₃C₃ + ₄C₃ + ₅C₃ + ₆C₃</b>의 값을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-1] <b style="color:#c2410c;">₂C₂ + ₃C₂ + ₄C₂ + ₅C₂</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-2] <b style="color:#c2410c;">₄C₄ + ₅C₄ + ₆C₄</b>의 값을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하여라.<br/>[Q11-3] <b style="color:#c2410c;">ᵣCᵣ + ᵣ₊₁Cᵣ + ᵣ₊₂Cᵣ + ·s + ₙCᵣ = ₙ₊₁Cᵣ₊₁</b> 공식을 설명하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 5. 확률</h1>
+<div class="pt-title">Part1. 확률의 정의</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q1] 주사위를 던져 나온 수가 짝수인 사건을 <b style="color:#c2410c;">A</b>라 했을 때 <b style="color:#c2410c;">A</b>를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 주사위를 던져 나온 수가 3 이하인 사건을 <b style="color:#c2410c;">B</b>라 했을 때 <b style="color:#c2410c;">B</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 주사위를 던져 나온 수가 소수인 사건을 <b style="color:#c2410c;">C</b>라 했을 때 <b style="color:#c2410c;">C</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 주사위를 던져 나온 수가 4의 약수인 사건을 <b style="color:#c2410c;">D</b>라 했을 때 <b style="color:#c2410c;">D</b>를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 설명하시오.<br/>[Q2] 표본공간(전사건), 근원사건이 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 1개를 던지는 상황<br/>ㄴ. 주사위 1개를 던지는 상황<br/>ㄷ. 동전 2개를 던지는 상황</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 표본공간의 정의를 쓰고, 동전 2개를 던지는 시행에서 표본공간을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 근원사건의 정의를 쓰고, 주사위 1개를 던지는 시행에서 근원사건을 모두 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 전사건과 표본공간의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 공사건을 설명하시오.<br/>[Q3] 공사건이 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주사위를 던져 7이 나오는 사건<br/>ㄴ. 동전을 던져 앞면과 뒷면이 동시에 나오는 사건<br/>ㄷ. 1부터 6까지 적힌 카드에서 0이 적힌 카드를 뽑는 사건</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 공사건의 정의를 쓰고, 공사건의 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 공사건과 전사건의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 공사건이 일어날 수 없는 이유를 집합의 관점에서 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] A를 포함한 4명을 줄 세울 때, A가 첫 번째로 설 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] B를 포함한 5명을 줄 세울 때, B가 마지막에 설 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 6명을 줄 세울 때, 특정한 사람이 양 끝에 설 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] A, B를 포함한 5명을 줄 세울 때, A가 B보다 앞에 설 확률을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 확률에 대한 다음 물음에 답하시오.<br/>① 확률값의 최솟값과 최댓값을 구하시오.<br/>② 빈칸을 채우시오: P(____) = 1, P(____) = 0<br/>③ 주사위에서 각 근원사건이 일어날 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 확률의 범위가 <b style="color:#c2410c;">0 ≤ P(A) ≤ 1</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 수학적 확률의 정의를 쓰고, 조건을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 동전 1개를 던질 때 각 근원사건의 확률을 구하고, 그 합이 1인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 확률의 계산</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 여사건을 설명하시오.<br/>[Q1] 사건 <b style="color:#c2410c;">A</b>의 여사건이 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주사위에서 짝수가 나오는 사건의 여사건<br/>ㄴ. 동전에서 앞면이 나오는 사건의 여사건<br/>ㄷ. 1~10 카드에서 소수를 뽑는 사건의 여사건</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 여사건의 정의를 쓰고, <b style="color:#c2410c;">P(A) + P(A^c) = 1</b>임을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 주사위를 던져 3의 배수가 나오는 사건의 여사건을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 여사건을 활용하면 유리한 경우를 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q2] 문제에 어떤 단어가 주어졌을 때 여사건 사용을 의심해야 하는지 적으시오. (2개 이상)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] '적어도 하나'라는 표현이 나왔을 때 여사건을 사용하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] '~가 아닌'이라는 표현과 여사건의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 여사건을 사용하면 계산이 간단해지는 예를 하나 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 검은 공 4개, 흰 공 3개가 들어 있는 주머니에서 임의로 3개의 공을 동시에 꺼낼 때, 적어도 한 개가 검은 공일 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 빨간 공 3개, 파란 공 4개에서 2개를 꺼낼 때, 적어도 1개가 빨간 공일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 흰 공 2개, 검은 공 3개에서 2개를 꺼낼 때, 검은 공만 2개 뽑을 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 남학생 4명, 여학생 3명에서 3명을 뽑을 때, 적어도 1명이 여학생일 확률을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 배반사건을 설명하시오.<br/>[Q4] 사건 <b style="color:#c2410c;">A</b>와 사건 <b style="color:#c2410c;">B</b>가 배반사건이란 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주사위에서 짝수/홀수가 나오는 사건<br/>ㄴ. 주사위에서 3 이하/4 이상이 나오는 사건<br/>ㄷ. 동전 2개에서 앞면 2개/뒷면 2개가 나오는 사건</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 배반사건의 정의를 쓰고, <b style="color:#c2410c;">A cap B = emptyset</b>의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 두 사건이 배반사건일 때 <b style="color:#c2410c;">P(A cup B) = P(A) + P(B)</b>가 성립하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 배반사건이 아닌 예를 들고, 그 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 배반사건과 여사건의 차이점을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시 상황]</b><br/>주사위를 던질 때, 1이 나오는 사건을 <b style="color:#c2410c;">A</b>, 2가 나오는 사건을 <b style="color:#c2410c;">B</b>라 하자.<br/><br/>① <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 배반사건인지 판단하고 이유를 쓰시오.<br/>② <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 여사건인지 판단하고 이유를 쓰시오.<br/>③ 위 결과를 바탕으로 배반사건과 여사건의 차이를 설명하시오.</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 배반사건이면서 여사건인 경우가 있는지 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 배반사건이지만 여사건이 아닌 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] <b style="color:#c2410c;">P(A) + P(B) = 1</b>이면 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 여사건인지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q6] 주사위를 한 번 던지는 시행에서 나오는 눈의 수가 3의 약수인 사건을 <b style="color:#c2410c;">A</b>라 할 때, 다음 [보기] 중 <b style="color:#c2410c;">A</b>와 서로 배반인 사건을 모두 고르시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 나오는 눈의 수가 4의 약수인 사건<br/>ㄴ. 나오는 눈의 수가 소수인 사건<br/>ㄷ. 나오는 눈의 수가 짝수인 사건<br/>ㄹ. 나오는 눈의 수가 홀수인 사건<br/>ㅁ. 나오는 눈의 수가 3의 배수인 사건</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 주사위에서 짝수가 나오는 사건과 배반인 사건을 모두 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 주사위에서 5 이상이 나오는 사건과 배반인 사건의 예를 2가지 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 두 사건이 배반인지 판단하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q7] 1부터 10까지 숫자가 적힌 카드 10장 중 한 장을 뽑을 때 다음 확률을 구하시오.<br/>① 2의 배수 또는 5의 배수인 숫자를 뽑을 확률<br/>② 3의 배수 또는 4의 배수인 숫자를 뽑을 확률</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 1부터 12까지 카드에서 2의 배수 또는 3의 배수를 뽑을 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 확률의 덧셈정리 <b style="color:#c2410c;">P(A cup B) = P(A) + P(B) - P(A cap B)</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 1부터 20까지에서 4의 배수 또는 6의 배수를 뽑을 확률을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q8] 사건이 3개일 때도 확률의 덧셈정리가 성립하는지 설명하시오.<br/>① 성립한다면 세 사건 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>, <b style="color:#c2410c;">C</b>에 대하여 <b style="color:#c2410c;">P(A cup B cup C)</b>를 구하시오.<br/>② 세 사건이 각각 서로 배반사건일 때 <b style="color:#c2410c;">P(A cup B cup C)</b>를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-1] 포함-배제의 원리를 이용하여 <b style="color:#c2410c;">P(A cup B cup C)</b>를 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-2] 세 사건이 서로 배반일 때와 아닐 때의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-3] 주사위에서 1 나오는 사건, 2 나오는 사건, 3 나오는 사건의 합사건 확률을 구하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 6. 조건부확률</h1>
+<div class="pt-title">Part1. 조건부확률</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 조건부확률을 설명하시오.<br/>[Q1] 조건부확률 <b style="color:#c2410c;">P(B|A)</b>는 어떤 의미이고 어떻게 계산하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주사위를 던져 짝수가 나왔을 때, 그 수가 4 이상일 확률<br/>ㄴ. 동전 2개를 던져 앞면이 1개 이상 나왔을 때, 2개 모두 앞면일 확률<br/>ㄷ. 카드 1~10에서 뽑은 수가 5 이상일 때, 그 수가 짝수일 확률</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 조건부확률의 정의를 쓰고, <b style="color:#c2410c;">P(B|A) = (P(A cap B))/(P(A))</b> 공식을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 조건부확률에서 '조건'이 의미하는 바를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] <b style="color:#c2410c;">P(A|B)</b>와 <b style="color:#c2410c;">P(B|A)</b>가 다른 이유를 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q2] 조건부확률 <b style="color:#c2410c;">P(B|A)</b>와 일반 확률 <b style="color:#c2410c;">P(B)</b>는 어떤 점이 다른지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 조건부확률에서 표본공간이 어떻게 변하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] <b style="color:#c2410c;">P(B|A)</b>와 <b style="color:#c2410c;">P(B)</b>가 같아지는 조건을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 일반 확률을 조건부확률로 나타내면 어떻게 되는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 어느 주말에 캠핑장을 찾은 전체 이용객 40명 중 남자는 24명, 남자 어른은 16명이다. 남자 이용객 중에서 임의로 한 명을 뽑을 때, 뽑힌 이용객이 어린이일 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 어느 동아리 회원 50명 중 남학생은 30명, 남학생 중 1학년은 12명이다. 남학생 중 임의로 한 명을 뽑을 때, 1학년일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 학급 학생 36명 중 안경을 쓴 학생은 18명, 안경을 쓴 여학생은 10명이다. 안경을 쓴 학생 중 임의로 한 명을 뽑을 때, 남학생일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 버스 승객 60명 중 학생은 24명, 학생 중 여학생은 16명이다. 학생 중 임의로 한 명을 뽑을 때, 남학생일 확률을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 조건부확률의 성질에 대한 다음 빈칸을 채우시오.<br/>① <b style="color:#c2410c;">P(B^c|A) = 1 - </b>____<br/>② 두 사건 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 서로 배반사건이면 <b style="color:#c2410c;">P(B|A) =</b> ____ <b style="color:#c2410c;">=</b> ____</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] <b style="color:#c2410c;">P(B|A) + P(B^c|A) = 1</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 두 사건이 배반일 때 <b style="color:#c2410c;">P(B|A) = 0</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] <b style="color:#c2410c;">P(A|A) = 1</b>인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 곱셈정리</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q1] 확률의 곱셈정리에 대한 다음 빈칸을 채우시오.<br/>두 사건 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>에 대하여 <b style="color:#c2410c;">P(A) ≠ 0</b>, <b style="color:#c2410c;">P(B) ≠ 0</b>일 때,<br/>① <b style="color:#c2410c;">P(A cap B) = P(A) ×</b> ____<br/>② <b style="color:#c2410c;">P(A cap B) = P(B) ×</b> ____</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 곱셈정리 <b style="color:#c2410c;">P(A cap B) = P(A) · P(B|A)</b>를 조건부확률 정의로부터 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 곱셈정리를 이용하여 조건부확률 공식을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] <b style="color:#c2410c;">P(A cap B) = P(A) · P(B|A) = P(B) · P(A|B)</b>가 성립하는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q2] 다음은 어느 학교 2학년 전체 학생 120명을 대상으로 MBTI를 조사하여 만든 표이다. 학생 중에서 임의로 뽑은 1명이 여학생일 때, 그 학생이 F형일 확률을 구하시오.<br/><table style='margin-top:10px; border-collapse:collapse; width:100%; text-align:center;'><tr style='background:#333;'><td style='border:1px solid #555; padding:8px;'></td><td style='border:1px solid #555; padding:8px;'>T형</td><td style='border:1px solid #555; padding:8px;'>F형</td><td style='border:1px solid #555; padding:8px;'>합계</td></tr><tr><td style='border:1px solid #555; padding:8px;'>남학생 수</td><td style='border:1px solid #555; padding:8px;'>10</td><td style='border:1px solid #555; padding:8px;'>20</td><td style='border:1px solid #555; padding:8px;'>30</td></tr><tr><td style='border:1px solid #555; padding:8px;'>여학생 수</td><td style='border:1px solid #555; padding:8px;'>40</td><td style='border:1px solid #555; padding:8px;'>50</td><td style='border:1px solid #555; padding:8px;'>90</td></tr><tr style='background:#333;'><td style='border:1px solid #555; padding:8px;'>합계</td><td style='border:1px solid #555; padding:8px;'>50</td><td style='border:1px solid #555; padding:8px;'>70</td><td style='border:1px solid #555; padding:8px;'>120</td></tr></table></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 위 표에서 임의로 뽑은 1명이 F형일 때, 남학생일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 위 표에서 임의로 뽑은 1명이 T형일 때, 여학생일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 위 표에서 남학생일 사건과 F형일 사건이 독립인지 판단하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 어느 학교의 전체 학생은 200명이고, 각 학생은 체험학습 A, B 중 하나를 선택하였다. 체험학습 A를 선택한 학생은 남학생 60명과 여학생 40명이다. 임의로 뽑은 1명이 체험학습 B를 선택한 학생일 때, 이 학생이 남학생일 확률이 <b style="color:#c2410c;">(2)/(5)</b>이다. 이 학교의 여학생 수를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 전체 학생 150명 중 동아리 A에 남학생 40명, 여학생 30명이 있다. 동아리 B 학생 중 뽑았을 때 여학생일 확률이 <b style="color:#c2410c;">(1)/(2)</b>이면 전체 남학생 수를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 조건부확률을 이용하여 미지수를 포함한 문제를 푸는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 표를 이용하여 조건부확률 문제를 푸는 전략을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 주머니에 흰 공 2개, 검은 공 4개가 있다. 갑이 공을 뽑은 후 을이 공을 뽑을 때, 갑이 흰 공을 뽑았다는 전제하에 을이 검은 공을 뽑을 확률을 구하시오. (단, 뽑은 공은 다시 넣지 않는다.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 빨간 공 3개, 파란 공 2개에서 A가 먼저 뽑고 B가 뽑을 때, A가 빨간 공을 뽑은 조건에서 B도 빨간 공을 뽑을 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 비복원추출에서 조건부확률이 사용되는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 복원추출과 비복원추출에서 확률 계산의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 주머니에 흰 공 3개와 검은 공 4개가 들어있다. 임의로 1개의 공을 꺼내어 확인한 후 다시 넣지 않는다. 이 시행을 두 번 반복하여 두 번째 꺼낸 공이 흰 공이었을 때, 첫 번째 꺼낸 공도 흰 공이었을 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 위 문제에서 두 번째가 검은 공일 때, 첫 번째도 검은 공일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 결과를 알고 원인을 추론하는 조건부확률 문제의 풀이 전략을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 베이즈 정리의 기본 개념을 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part3. 독립과 종속</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 독립과 종속을 설명하시오.<br/>[Q1] 두 사건 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 독립이라는 것은 무엇을 의미하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전을 두 번 던질 때, 첫 번째 앞면 / 두 번째 앞면<br/>ㄴ. 주사위를 두 번 던질 때, 첫 번째 짝수 / 두 번째 3의 배수<br/>ㄷ. 서로 다른 주머니에서 각각 공을 뽑는 경우</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 독립의 정의 <b style="color:#c2410c;">P(A cap B) = P(A) · P(B)</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 독립일 때 <b style="color:#c2410c;">P(B|A) = P(B)</b>가 성립하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 독립과 배반의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 종속을 설명하시오.<br/>[Q2] 두 사건이 종속인 예를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 한 주머니에서 공을 비복원추출하는 경우<br/>ㄴ. 제비뽑기에서 먼저 뽑은 사람이 당첨된 후 다음 사람이 뽑는 경우<br/>ㄷ. 카드를 한 장 뽑아 확인 후 다시 넣지 않고 또 뽑는 경우</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 종속일 때 <b style="color:#c2410c;">P(B|A) ≠ P(B)</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 비복원추출이 종속인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 복원추출이 독립인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 두 사건 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>가 독립일 때, 다음 중 독립인 것을 모두 고르시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B^c</b><br/>ㄴ. <b style="color:#c2410c;">A^c</b>와 <b style="color:#c2410c;">B</b><br/>ㄷ. <b style="color:#c2410c;">A^c</b>와 <b style="color:#c2410c;">B^c</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 독립이면 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B^c</b>도 독립임을 증명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 독립이면 <b style="color:#c2410c;">A^c</b>와 <b style="color:#c2410c;">B^c</b>도 독립임을 증명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 독립의 성질을 이용하여 문제를 푸는 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 검은 공 3개, 흰 공 4개가 들어있을 때 검은 공을 먼저 뽑고 흰 공을 뽑을 확률을 구하시오. (단, 꺼낸 공은 다시 넣지 않는다.)</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 빨간 공 2개, 파란 공 3개에서 빨간 공, 파란 공 순서로 뽑을 확률을 구하시오. (비복원)</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 위 문제를 복원추출로 바꾸면 확률이 어떻게 달라지는지 비교하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 곱셈정리를 이용하여 연속 사건의 확률을 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 독립사건과 배반사건은 어떤 점에서 다른지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 독립이면서 배반인 경우가 있는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 배반사건이면 반드시 종속인지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 독립과 배반을 혼동하기 쉬운 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q6] 두 사건 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>가 독립일 필요충분조건을 모두 쓰시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] <b style="color:#c2410c;">P(A cap B) = P(A) · P(B)</b>가 독립의 정의인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] <b style="color:#c2410c;">P(B|A) = P(B)</b>가 독립의 필요충분조건임을 증명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] <b style="color:#c2410c;">P(A|B) = P(A)</b>가 독립의 필요충분조건임을 증명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 복원추출과 비복원추출의 차이를 설명하시오.<br/>[Q7] 복원추출과 비복원추출은 어떤 차이가 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주머니에서 공을 뽑고 다시 넣은 후 또 뽑는 경우<br/>ㄴ. 주머니에서 공을 뽑고 넣지 않고 또 뽑는 경우<br/>ㄷ. 카드를 뽑아 확인 후 다시 섞어서 또 뽑는 경우</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 복원추출에서 각 시행이 독립인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 비복원추출에서 각 시행이 종속인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 복원추출과 비복원추출의 확률 계산 방법 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q8] 한 개의 주사위를 던져 짝수의 눈이 나오는 사건을 <b style="color:#c2410c;">A</b>, 4의 약수의 눈이 나오는 사건을 <b style="color:#c2410c;">B</b>, 3의 배수의 눈이 나오는 사건을 <b style="color:#c2410c;">C</b>라 할 때, [보기]에서 옳은 것을 모두 고르시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 두 사건 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>는 서로 독립이다.<br/>ㄴ. 두 사건 <b style="color:#c2410c;">B</b>, <b style="color:#c2410c;">C</b>는 서로 종속이다.<br/>ㄷ. 두 사건 <b style="color:#c2410c;">C</b>, <b style="color:#c2410c;">A</b>는 서로 독립이다.</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-1] 위 문제에서 <b style="color:#c2410c;">A = {2, 4, 6}</b>, <b style="color:#c2410c;">B = {1, 2, 4}</b>, <b style="color:#c2410c;">C = {3, 6}</b>임을 확인하고 각 보기를 판단하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-2] 두 사건이 독립인지 확인하는 방법 3가지를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-3] <b style="color:#c2410c;">P(A cap B) = P(A) · P(B)</b>를 계산하여 <b style="color:#c2410c;">A</b>, <b style="color:#c2410c;">B</b>의 독립 여부를 판단하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q9] 남학생 10명과 여학생 20명으로 이루어진 학급에서 헌혈을 한 남학생은 6명, 여학생은 12명이다. 임의로 한 명을 뽑을 때, 여학생인 사건을 <b style="color:#c2410c;">A</b>, 헌혈을 한 학생인 사건을 <b style="color:#c2410c;">B</b>라 하자. 두 사건 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 독립인지 종속인지 판단하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[힌트]</b> 독립 확인 방법 3가지 중 하나를 사용하시오.<br/>① <b style="color:#c2410c;">P(A cap B) = P(A) · P(B)</b><br/>② <b style="color:#c2410c;">P(B|A) = P(B)</b><br/>③ <b style="color:#c2410c;">P(A|B) = P(A)</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-1] 위 문제를 <b style="color:#c2410c;">P(A cap B) = P(A) · P(B)</b>로 확인하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-2] 위 문제를 <b style="color:#c2410c;">P(B|A) = P(B)</b>로 확인하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-3] 위 문제를 <b style="color:#c2410c;">P(A|B) = P(A)</b>로 확인하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q10] 두 사건 <b style="color:#c2410c;">A</b>와 <b style="color:#c2410c;">B</b>가 서로 독립이고 <b style="color:#c2410c;">P(A) = (1)/(4)</b>, <b style="color:#c2410c;">P(B) = (1)/(5)</b>일 때, <b style="color:#c2410c;">P(A cup B)</b>를 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-1] 독립일 때 <b style="color:#c2410c;">P(A cup B) = P(A) + P(B) - P(A)P(B)</b>임을 유도하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-2] <b style="color:#c2410c;">P(A) = (1)/(3)</b>, <b style="color:#c2410c;">P(B) = (1)/(2)</b>이고 독립일 때 <b style="color:#c2410c;">P(A cup B)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-3] 독립일 때 <b style="color:#c2410c;">P(A^c cap B^c)</b>를 <b style="color:#c2410c;">P(A)</b>, <b style="color:#c2410c;">P(B)</b>로 나타내시오.</div>
+</div>
+</div>
+<div class="pt-title">Part4. 독립시행의 확률</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q1] 독립시행의 확률 공식을 쓰고 각 부분이 의미하는 바를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b style="color:#c2410c;">P = {}ₙCᵣ · pʳ · (1-p)ⁿ⁻ʳ</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 독립시행에서 <b style="color:#c2410c;">{}ₙCᵣ</b>이 필요한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 독립시행의 확률과 이항분포의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 독립시행에서 '독립'이 의미하는 바를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q2] 「~때」가 나오면 무조건 조건부확률이라고 생각해야 하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>ㄱ. 주사위를 던져 짝수가 나왔을 때, 4 이상일 확률 (조건부확률)<br/>ㄴ. 동전을 3번 던질 때, 앞면이 2번 나올 확률 (독립시행)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 조건부확률과 독립시행의 확률을 구별하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] '~할 때'가 조건을 나타내는 경우와 시행 횟수를 나타내는 경우를 구별하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 문제에서 조건부확률인지 독립시행인지 판단하는 기준을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 매스타트 야구팀은 비가 내릴 때 경기에서 이길 확률이 0.6이고, 비가 내리지 않을 때 이길 확률은 0.4이다. 경기가 예정된 날에 비가 내릴 확률이 0.5일 때, 그 날 경기에서 매스타트 야구팀이 이길 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 위 문제를 전확률 공식으로 풀이하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] A공장 생산품 불량률 0.1, B공장 불량률 0.2이고, A공장 제품일 확률이 0.7일 때 불량품일 확률을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 전확률 공식 <b style="color:#c2410c;">P(B) = P(A)P(B|A) + P(A^c)P(B|A^c)</b>를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 독립시행을 설명하시오.<br/>[Q4] 독립시행이란 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전을 여러 번 던지는 시행<br/>ㄴ. 주사위를 여러 번 던지는 시행<br/>ㄷ. 복원추출로 공을 여러 번 뽑는 시행</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 독립시행의 조건을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 독립시행과 종속시행의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 독립시행에서 각 시행의 확률이 동일한 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 수직선 위의 원점에 점 A가 있다. 한 개의 주사위를 던져서 6의 약수의 눈이 나오면 점 A를 +1만큼, 그 이외의 눈이 나오면 점 A를 -1만큼 움직인다. 주사위를 4번 던질 때, 점 A가 원점에 있을 확률을 구하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 위 문제에서 6의 약수는 1, 2, 3, 6이므로 +1로 이동할 확률이 <b style="color:#c2410c;">(4)/(6) = (2)/(3)</b>임을 확인하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 4번 던져서 원점에 있으려면 +1이 2번, -1이 2번 나와야 함을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 주사위를 5번 던질 때, 점 A가 +1의 위치에 있을 확률을 구하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 7. 이산확률변수와 이항분포</h1>
+<div class="pt-title">Part1. 확률변수</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 자료와 변수의 차이를 설명하시오.<br/>[Q1] 통계에서 「자료」와 「변수」는 어떻게 다른지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 학생들의 키 측정값 vs 키라는 항목<br/>ㄴ. 주사위를 던져 나온 눈의 수 vs 눈의 수라는 항목<br/>ㄷ. 시험 점수 85, 90, 75 vs 시험 점수라는 항목</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 변수의 정의를 쓰고, 변수가 가질 수 있는 값의 예를 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 자료의 정의를 쓰고, 자료 수집 방법의 예를 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 변수와 자료의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률변수를 설명하시오.<br/>[Q2] 확률변수는 왜 함수처럼 생각할 수 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 2개를 던질 때 앞면의 개수 X (HH→2, HT→1, TH→1, TT→0)<br/>ㄴ. 주사위를 던질 때 나오는 눈의 수 X (각 결과→숫자)<br/>ㄷ. 복권 당첨 금액 X (당첨→금액, 꽝→0)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 확률변수의 정의를 쓰고, 표본공간과의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 확률변수를 대문자 <b style="color:#c2410c;">X</b>로 나타내는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 확률변수의 값과 그 확률의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 확률변수의 각 값에 대응하는 확률은 몇 개인지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 확률변수 <b style="color:#c2410c;">X</b>가 특정 값을 가질 확률 <b style="color:#c2410c;">P(X=x)</b>의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 확률변수의 모든 값에 대한 확률의 합이 1인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 하나의 확률변수 값에 여러 확률이 대응될 수 없는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 확률변수의 성질은 어떤 조건을 만족해야 하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[조건]</b><br/>① 각 확률 <b style="color:#c2410c;">P(X=xᵢ)</b>는 ____ 이상이다.<br/>② 모든 확률의 합 <b style="color:#c2410c;">Σ P(X=xᵢ)</b>는 ____이다.</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 확률이 음수가 될 수 없는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 확률의 합이 1인 이유를 전사건의 관점에서 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 확률변수의 성질을 만족하지 않는 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률변수의 종류를 설명하시오.<br/>[Q5] 확률변수는 어떻게 두 종류로 나뉘는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 주사위 눈의 수(이산) vs 사람의 키(연속)<br/>ㄴ. 동전 앞면 개수(이산) vs 버스 대기 시간(연속)<br/>ㄷ. 불량품 개수(이산) vs 전구의 수명(연속)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 이산확률변수의 정의를 쓰고 예를 3가지 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 연속확률변수의 정의를 쓰고 예를 3가지 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 이산과 연속을 구분하는 기준을 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 이산확률변수</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 이산확률변수를 설명하시오.<br/>[Q1] 이산확률변수는 어떤 값들을 가질 수 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 3개를 던질 때 앞면의 개수: 0, 1, 2, 3<br/>ㄴ. 주사위를 던질 때 나오는 눈의 수: 1, 2, 3, 4, 5, 6<br/>ㄷ. 복권 10장 중 당첨 개수: 0, 1, 2, ..., 10</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 이산확률변수의 값이 '셀 수 있다'는 것의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 이산확률변수의 값이 유한개 또는 무한개일 수 있음을 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 이산확률변수가 정수값만 갖는 것은 아님을 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 「셀 수 있다」의 의미를 설명하시오.<br/>[Q2] 「셀 수 있다」는 것은 어떤 상황을 뜻하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 가방 안의 공의 개수를 하나씩 세는 경우<br/>ㄴ. 시험에서 맞힌 문제의 개수를 세는 경우<br/>ㄷ. 하루에 받는 전화의 횟수를 세는 경우</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 셀 수 없는 경우의 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 자연수와 일대일 대응이 가능하면 셀 수 있음을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 실수 구간의 값이 셀 수 없는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 이산확률변수의 예를 설명하시오.<br/>[Q3] 이산확률변수의 예를 들고 가능한 값을 나열하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 2개를 던질 때 앞면의 개수 <b style="color:#c2410c;">X</b><br/>ㄴ. 제품 5개 중 불량품의 개수 <b style="color:#c2410c;">X</b><br/>ㄷ. 주사위 2개의 눈의 합 <b style="color:#c2410c;">X</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 동전 3개를 던질 때 앞면의 개수 <b style="color:#c2410c;">X</b>의 가능한 값을 모두 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 주사위 1개를 던질 때 3의 배수가 나오는 횟수 <b style="color:#c2410c;">X</b>의 가능한 값을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 카드 1~5에서 2장을 뽑을 때 짝수 카드의 개수 <b style="color:#c2410c;">X</b>의 가능한 값을 쓰시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률분포표를 설명하시오.<br/>[Q4] 이산확률변수는 어떻게 표로 정리할 수 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 2개: <b style="color:#c2410c;">X</b>=앞면 개수, <b style="color:#c2410c;">P(X=0)=(1)/(4)</b>, <b style="color:#c2410c;">P(X=1)=(1)/(2)</b>, <b style="color:#c2410c;">P(X=2)=(1)/(4)</b><br/>ㄴ. 주사위 1개: <b style="color:#c2410c;">X</b>=눈의 수, 각 확률 <b style="color:#c2410c;">(1)/(6)</b><br/>ㄷ. 복권 3장(당첨확률 0.1): <b style="color:#c2410c;">X</b>=당첨 개수</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 확률분포표의 형식을 설명하고 예를 그리시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 확률분포표에서 확률의 합이 1임을 확인하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 확률분포표를 이용하여 <b style="color:#c2410c;">P(X ≥ 1)</b>을 구하는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 확률분포표는 어떤 정보를 담고 있는지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 확률분포표에서 확률변수의 값을 읽는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 확률분포표에서 각 확률값의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 확률분포표를 그래프로 나타내는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률질량함수를 설명하시오.<br/>[Q6] 확률질량함수는 어떤 함수이고 어떤 조건을 만족해야 하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. <b style="color:#c2410c;">P(X=k) = (1)/(6)</b> (<b style="color:#c2410c;">k=1,2,...,6</b>) - 주사위<br/>ㄴ. <b style="color:#c2410c;">P(X=k) = {}₂C_k · ((1)/(2))²</b> (<b style="color:#c2410c;">k=0,1,2</b>) - 동전 2개<br/>ㄷ. <b style="color:#c2410c;">P(X=k) = (k)/(10)</b> (<b style="color:#c2410c;">k=1,2,3,4</b>) - 확률의 합=1 확인 필요</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 확률질량함수의 정의를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 확률질량함수가 만족해야 하는 두 가지 조건을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 확률질량함수의 값은 어떤 의미인지 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part3. 확률분포</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률변수의 평균(기댓값)을 설명하시오.<br/>[Q1] 확률변수의 평균은 어떻게 구하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전 2개를 던질 때 앞면 개수의 기댓값<br/>ㄴ. 주사위를 던질 때 눈의 수의 기댓값<br/>ㄷ. 복권 당첨금의 기댓값 (1등 100만원 확률 0.01, 꽝 확률 0.99)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 기댓값 공식 <b style="color:#c2410c;">E(X) = Σ xᵢ P(X=xᵢ)</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 기댓값이 '평균'이라 불리는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 주사위를 던질 때 눈의 수의 기댓값 3.5의 의미를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 분산을 설명하시오.<br/>[Q2] 분산은 평균에서 얼마나 떨어졌는지를 어떻게 표현하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 항상 3이 나오는 경우 vs 1~6이 고르게 나오는 경우<br/>ㄴ. 시험 점수가 모두 80점인 경우 vs 60~100점에 분포된 경우<br/>ㄷ. 키가 비슷한 집단 vs 키 차이가 큰 집단</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 분산 공식 <b style="color:#c2410c;">V(X) = E(X²) - {E(X)}²</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 분산이 클수록 어떤 의미인지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 분산이 0이 되는 경우를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 표준편차는 분산과 어떤 관계인지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 표준편차 공식 <b style="color:#c2410c;">σ(X) = √{V(X)}</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 표준편차를 사용하는 이유(분산 대신)를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 표준편차의 단위가 원래 자료와 같은 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] <b style="color:#c2410c;">aX+b</b>의 평균은 어떻게 구하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b> <b style="color:#c2410c;">E(aX+b) = aE(X) + b</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] <b style="color:#c2410c;">E(X) = 3</b>일 때, <b style="color:#c2410c;">E(2X+5)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] <b style="color:#c2410c;">E(aX+b) = aE(X) + b</b>가 성립하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] <b style="color:#c2410c;">E(X+Y) = E(X) + E(Y)</b>가 성립하는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] <b style="color:#c2410c;">aX+b</b>의 분산, 표준편차는 어떻게 구하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br/><b style="color:#c2410c;">V(aX+b) = a² V(X)</b><br/><b style="color:#c2410c;">σ(aX+b) = |a| σ(X)</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] <b style="color:#c2410c;">V(X) = 4</b>일 때, <b style="color:#c2410c;">V(3X+2)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 분산에서 상수 <b style="color:#c2410c;">b</b>가 사라지는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] <b style="color:#c2410c;">σ(X) = 2</b>일 때, <b style="color:#c2410c;">σ(-2X+3)</b>을 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 이항분포를 설명하시오.<br/>[Q6] 이항분포는 어떤 조건에서 생기는 분포인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전을 10번 던질 때 앞면이 나오는 횟수<br/>ㄴ. 불량률 0.1인 제품 5개 중 불량품의 개수<br/>ㄷ. 자유투 성공률 0.8인 선수가 10번 던질 때 성공 횟수</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 이항분포의 조건 4가지를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 이항분포를 기호 <b style="color:#c2410c;">B(n, p)</b>로 나타내는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 이항분포가 아닌 경우의 예를 들어 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q7] 시행이 독립이라는 것은 무슨 뜻인지 설명하시오.</div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 복원추출이 독립시행인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 비복원추출이 독립시행이 아닌 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 각 시행의 성공 확률이 일정해야 하는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q8] 이항분포에서 확률을 계산할 때 필요한 요소를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b> <b style="color:#c2410c;">P(X=r) = {}ₙCᵣ · pʳ · (1-p)ⁿ⁻ʳ</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-1] 공식에서 <b style="color:#c2410c;">{}ₙCᵣ</b>이 필요한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-2] 공식에서 <b style="color:#c2410c;">pʳ</b>이 의미하는 바를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-3] 공식에서 <b style="color:#c2410c;">(1-p)ⁿ⁻ʳ</b>이 의미하는 바를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q9] 이항분포의 평균과 분산은 어떻게 구하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br/><b style="color:#c2410c;">X sim B(n, p)</b>일 때,<br/><b style="color:#c2410c;">E(X) = np</b>, <b style="color:#c2410c;">V(X) = np(1-p)</b>, <b style="color:#c2410c;">σ(X) = √{np(1-p)}</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-1] <b style="color:#c2410c;">X sim B(10, 0.3)</b>일 때, <b style="color:#c2410c;">E(X)</b>와 <b style="color:#c2410c;">V(X)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-2] 이항분포의 평균이 <b style="color:#c2410c;">np</b>인 직관적 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-3] <b style="color:#c2410c;">p = 0.5</b>일 때 분산이 최대가 되는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 이항분포의 성질을 설명하시오.<br/>[Q10] 이항분포는 항상 대칭인지, 아니라면 언제 대칭인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. <b style="color:#c2410c;">B(10, 0.5)</b> - 대칭<br/>ㄴ. <b style="color:#c2410c;">B(10, 0.2)</b> - 왼쪽으로 치우침<br/>ㄷ. <b style="color:#c2410c;">B(10, 0.8)</b> - 오른쪽으로 치우침</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-1] <b style="color:#c2410c;">p = 0.5</b>일 때 이항분포가 대칭인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-2] <b style="color:#c2410c;">n</b>이 커지면 이항분포의 모양이 어떻게 변하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-3] 시행 횟수와 성공 확률이 분포 모양에 미치는 영향을 설명하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 8. 연속확률변수와 정규분포</h1>
+<div class="pt-title">Part1. 연속확률변수와 확률밀도함수</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률이 「넓이」로 표현되는 이유를 설명하시오.<br/>[Q1] 연속확률변수에서 확률이 넓이로 표현되는 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 키가 170cm~175cm인 사람의 비율 → 구간의 넓이<br/>ㄴ. 버스 대기시간이 5분~10분일 확률 → 구간의 넓이<br/>ㄷ. 전구 수명이 1000~1100시간일 확률 → 구간의 넓이</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 연속확률변수에서 점이 아닌 구간으로 확률을 구하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 이산확률변수와 연속확률변수의 확률 표현 방식 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 확률밀도함수 아래 넓이가 확률인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 <b style="color:#c2410c;">P(X=a)=0</b>인 이유를 설명하시오.<br/>[Q2] 연속확률변수에서 <b style="color:#c2410c;">P(X=a)</b>는 왜 0인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 키가 정확히 170.000...cm인 사람의 확률<br/>ㄴ. 버스가 정확히 5.000...분에 도착할 확률<br/>ㄷ. 전구가 정확히 1000.000...시간에 고장날 확률</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 선의 넓이가 0인 것과 <b style="color:#c2410c;">P(X=a)=0</b>의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] <b style="color:#c2410c;">P(X=a)=0</b>이지만 <b style="color:#c2410c;">X=a</b>가 불가능한 것은 아닌 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] <b style="color:#c2410c;">P(a ≤ X ≤ b) = P(a < X < b)</b>가 성립하는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 확률밀도함수를 설명하시오.<br/>[Q3] 확률밀도함수는 무엇을 나타내는 함수인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 균등분포: <b style="color:#c2410c;">f(x) = (1)/(b-a)</b> (<b style="color:#c2410c;">a ≤ x ≤ b</b>)<br/>ㄴ. 정규분포: 종 모양의 곡선<br/>ㄷ. 지수분포: 감소하는 곡선</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 확률밀도함수의 정의를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 확률밀도함수의 값 <b style="color:#c2410c;">f(a)</b>는 확률이 아닌 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 확률밀도함수가 1보다 클 수 있는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 함수 아래 넓이의 의미를 설명하시오.<br/>[Q4] 확률밀도함수 아래의 넓이는 어떤 의미인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. <b style="color:#c2410c;">intₐ^b f(x)dx = P(a ≤ X ≤ b)</b><br/>ㄴ. 구간 [170, 175]의 넓이 = 키가 170~175cm일 확률<br/>ㄷ. 구간 [5, 10]의 넓이 = 대기시간이 5~10분일 확률</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 적분을 이용하여 확률을 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 균등분포에서 <b style="color:#c2410c;">P(a ≤ X ≤ b)</b>를 넓이로 구하는 방법을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 확률밀도함수의 그래프와 확률의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 확률밀도함수의 전체 넓이는 얼마인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[조건]</b><br/>① <b style="color:#c2410c;">f(x) ≥ 0</b> (모든 <b style="color:#c2410c;">x</b>에서)<br/>② <b style="color:#c2410c;">int_-∞^(∞) f(x)dx = 1</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 전체 넓이가 1인 이유를 전사건의 관점에서 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 확률밀도함수가 만족해야 하는 두 가지 조건을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] <b style="color:#c2410c;">f(x) = kx</b> (<b style="color:#c2410c;">0 ≤ x ≤ 2</b>)에서 상수 <b style="color:#c2410c;">k</b>를 구하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 정규분포</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 정규분포의 모양을 설명하시오.<br/>[Q1] 정규분포는 어떤 모양의 그래프인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 학생들의 키 분포 - 평균 근처에 많이 모임<br/>ㄴ. 시험 점수 분포 - 종 모양<br/>ㄷ. 제품의 무게 분포 - 좌우 대칭</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 정규분포 곡선의 특징을 3가지 이상 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 정규분포가 좌우 대칭인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 정규분포 곡선과 x축 사이의 넓이가 1인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 평균이 그래프에 미치는 영향을 설명하시오.<br/>[Q2] 평균을 중심으로 정규분포 그래프는 어떻게 생겼는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 평균=50인 분포 vs 평균=70인 분포 (위치 이동)<br/>ㄴ. 평균=0인 분포 vs 평균=100인 분포 (중심 이동)<br/>ㄷ. 남학생 평균 키 vs 여학생 평균 키 (분포 위치 차이)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 평균이 바뀌면 그래프가 어떻게 변하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 평균이 그래프의 대칭축인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 평균에서 확률밀도함수의 값이 최대인 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표준편차가 그래프에 미치는 영향을 설명하시오.<br/>[Q3] 표준편차를 바꾸면 정규분포 그래프에 어떤 변화가 생기는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. σ=1 vs σ=2 (넓이는 같지만 모양이 다름)<br/>ㄴ. 표준편차 작음 → 뾰족하고 좁음 / 표준편차 큼 → 완만하고 넓음<br/>ㄷ. 성적 편차 작은 반 vs 성적 편차 큰 반</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 표준편차가 커지면 그래프가 어떻게 변하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 표준편차가 달라도 그래프 아래 넓이는 1인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 표준편차가 0에 가까워지면 그래프가 어떻게 되는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 정규분포를 기호 <b style="color:#c2410c;">N(μ, σ²)</b>로 나타내는 방법을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>ㄱ. <b style="color:#c2410c;">N(50, 10²)</b>: 평균 50, 표준편차 10<br/>ㄴ. <b style="color:#c2410c;">N(170, 5²)</b>: 평균 170, 표준편차 5<br/>ㄷ. <b style="color:#c2410c;">N(0, 1)</b>: 평균 0, 표준편차 1 (표준정규분포)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] <b style="color:#c2410c;">X sim N(100, 25)</b>에서 평균과 표준편차를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 기호에서 분산이 아닌 표준편차가 중요한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 두 정규분포 <b style="color:#c2410c;">N(50, 9)</b>와 <b style="color:#c2410c;">N(60, 9)</b>의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 정규분포의 성질을 설명하시오.<br/>[Q5] 정규분포에서 평균을 기준으로 확률이 어떻게 분포하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. <b style="color:#c2410c;">P(μ - σ ≤ X ≤ μ + σ) approx 0.68</b><br/>ㄴ. <b style="color:#c2410c;">P(μ - 2σ ≤ X ≤ μ + 2σ) approx 0.95</b><br/>ㄷ. <b style="color:#c2410c;">P(μ - 3σ ≤ X ≤ μ + 3σ) approx 0.997</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 68-95-99.7 규칙을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] <b style="color:#c2410c;">N(100, 10²)</b>에서 90~110 사이에 있을 확률을 추정하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 평균에서 멀어질수록 확률이 작아지는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q6] 정규분포가 자연현상과 사회현상에서 자주 나타나는 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>ㄱ. 키, 몸무게 등 신체 측정값<br/>ㄴ. 시험 점수, IQ 점수<br/>ㄷ. 제품의 규격, 측정 오차</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 중심극한정리와 정규분포의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 정규분포가 아닌 분포의 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 정규분포가 통계학에서 중요한 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="pt-title">Part3. 표준정규분포</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표준정규분포를 따로 배우는 이유를 설명하시오.<br/>[Q1] 표준정규분포는 왜 따로 배우는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 모든 정규분포를 하나의 표로 통일 가능<br/>ㄴ. 계산과 비교가 편리함<br/>ㄷ. 표준정규분포표 하나로 모든 확률 계산 가능</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 정규분포마다 확률표를 만들면 어떤 문제가 생기는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 표준정규분포로 통일하면 어떤 장점이 있는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 다양한 정규분포를 비교하려면 표준화가 필요한 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표준정규분포의 그래프를 설명하시오.<br/>[Q2] 평균이 0이고 표준편차가 1인 그래프는 어떤 모습인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 중심이 0에 위치<br/>ㄴ. <b style="color:#c2410c;">z = pm 1</b>에서 변곡점<br/>ㄷ. <b style="color:#c2410c;">z = 0</b>에서 최댓값</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] <b style="color:#c2410c;">N(0, 1)</b>의 그래프를 그리고 특징을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 표준정규분포에서 <b style="color:#c2410c;">P(Z ≤ 0) = 0.5</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 표준정규분포에서 <b style="color:#c2410c;">P(-1 ≤ Z ≤ 1) approx 0.68</b>임을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q3] 모든 정규분포를 표준정규분포(Z분포)로 바꿀 수 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br/><b style="color:#c2410c;">X sim N(μ, σ²)</b>이면<br/><b style="color:#c2410c;">Z = (X - μ)/(σ) sim N(0, 1)</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 표준화 공식 <b style="color:#c2410c;">Z = (X - μ)/(σ)</b>의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] <b style="color:#c2410c;">X sim N(50, 10²)</b>일 때, <b style="color:#c2410c;">X=60</b>을 표준화하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 표준화하면 평균이 0, 표준편차가 1이 되는 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표준화가 필요한 이유를 설명하시오.<br/>[Q4] 표준화는 왜 필요한 계산인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 서로 다른 시험 점수 비교 (수학 80점 vs 영어 75점)<br/>ㄴ. 서로 다른 단위의 데이터 비교<br/>ㄷ. 표준정규분포표를 사용하기 위해</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 평균 70, 표준편차 10인 시험에서 80점의 상대적 위치를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 표준화 점수(z-score)의 의미를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] <b style="color:#c2410c;">z = 2</b>가 의미하는 바를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q5] 정규분포를 표준정규분포로 바꾸는 과정을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/><b style="color:#c2410c;">X sim N(100, 20²)</b>에서 <b style="color:#c2410c;">P(X ≤ 120)</b> 구하기<br/>→ <b style="color:#c2410c;">Z = (120-100)/(20) = 1</b><br/>→ <b style="color:#c2410c;">P(Z ≤ 1)</b>을 표에서 찾기</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] <b style="color:#c2410c;">X sim N(50, 5²)</b>에서 <b style="color:#c2410c;">P(X ≤ 60)</b>을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] <b style="color:#c2410c;">X sim N(80, 10²)</b>에서 <b style="color:#c2410c;">P(70 ≤ X ≤ 90)</b>을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 표준정규분포표를 읽는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 이항분포와 정규분포의 관계를 설명하시오.<br/>[Q6] 이항분포가 정규분포로 바뀌는 이유를 설명하시오. (라플라스 정리)<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 동전을 10번 vs 100번 vs 1000번 던질 때 분포 모양 변화<br/>ㄴ. 시행 횟수가 많아지면 종 모양에 가까워짐<br/>ㄷ. <b style="color:#c2410c;">n</b>이 충분히 크면 <b style="color:#c2410c;">B(n,p) approx N(np, np(1-p))</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 이항분포의 정규근사 조건 <b style="color:#c2410c;">np ≥ 5</b>, <b style="color:#c2410c;">n(1-p) ≥ 5</b>를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] <b style="color:#c2410c;">X sim B(100, 0.5)</b>를 정규분포로 근사할 때 평균과 분산을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 이항분포를 정규분포로 근사하면 유리한 상황을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q7] 이항분포의 정규근사는 어떤 상황에서 유용한지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>ㄱ. 동전을 1000번 던질 때 앞면이 490~510번 나올 확률<br/>ㄴ. 불량률 1%인 제품 500개 중 불량품이 10개 이하일 확률<br/>ㄷ. <b style="color:#c2410c;">{1000}C₅₀₀</b> 같은 큰 조합 계산을 피할 수 있음</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 시행 횟수가 많으면 이항분포 계산이 어려운 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 정규근사를 이용하여 <b style="color:#c2410c;">B(100, 0.5)</b>에서 <b style="color:#c2410c;">P(45 ≤ X ≤ 55)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 연속성 수정(continuity correction)이 필요한 이유를 설명하시오.</div>
+</div>
+</div>
+<h1 class="ch-title">Chapter 9. 모집단과 표본</h1>
+<div class="pt-title">Part1. 모집단과 표본</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 모집단과 표본집단의 관계를 설명하시오.<br/>[Q1] 모집단과 표본집단은 어떤 관계인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 전교생(모집단) → 각 반에서 5명씩 추출(표본)<br/>ㄴ. 전국 유권자(모집단) → 1000명 설문조사(표본)<br/>ㄷ. 공장 전체 제품(모집단) → 100개 품질검사(표본)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 모집단이란 무엇인지 정의하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 표본이 모집단을 대표해야 하는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 모집단과 표본의 크기 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 대표성 없는 표본의 문제점을 설명하시오.<br/>[Q2] 대표성이 없는 표본을 뽑으면 어떤 문제가 생기는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 서울에서만 조사 → 전국 여론 예측 실패<br/>ㄴ. 남학생만 조사 → 전체 학생 평균 키 추정 오류<br/>ㄷ. 인터넷 사용자만 조사 → 노인층 의견 누락</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 편향된 표본(biased sample)이란 무엇인지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] 무작위 추출이 필요한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 표본 선정 오류의 실제 사례를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 추출의 목적을 설명하시오.<br/>[Q3] 표본을 추출하는 목적은 무엇인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 시간과 비용 절약 → 전수조사 대신 일부만 조사<br/>ㄴ. 모집단 특성 추정 → 표본으로 전체 예측<br/>ㄷ. 파괴검사 → 전부 검사하면 제품이 없어짐</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 전수조사가 불가능한 상황의 예를 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 표본조사의 장점을 3가지 이상 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 표본을 통해 모집단을 추정하는 과정을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 크기의 장점을 설명하시오.<br/>[Q4] 표본이 클수록 어떤 장점이 있는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 표본 10명 vs 100명 → 100명이 더 정확<br/>ㄴ. 여론조사 500명 vs 1500명 → 오차범위 감소<br/>ㄷ. 큰 표본 → 모집단 특성을 더 잘 반영</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 표본 크기와 추정 정확도의 관계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 표본이 클수록 표준오차가 줄어드는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 적절한 표본 크기를 결정하는 요인을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 모집단 직접 조사의 어려움을 설명하시오.<br/>[Q5] 모집단을 직접 조사하기 어려운 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 비용 문제 → 전국민 조사는 막대한 비용 필요<br/>ㄴ. 시간 문제 → 1억 명 조사는 현실적으로 불가능<br/>ㄷ. 접근성 문제 → 모든 대상에 접근 어려움</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 전수조사와 표본조사의 비용 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] 모집단이 무한할 때 어떻게 조사하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 전수조사가 필요한 경우의 예를 드시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 모평균의 의미를 설명하시오.<br/>[Q6] 모평균은 무엇을 나타내는 값인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 전교생 수학 평균 점수 = 모평균<br/>ㄴ. 전국 성인 남성 평균 키 = 모평균<br/>ㄷ. 공장 전체 제품의 평균 무게 = 모평균</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 모평균을 기호로 나타내는 방법을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 모평균과 표본평균의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 모평균을 알 수 없는 경우가 많은 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 모평균 추정에 필요한 것을 설명하시오.<br/>[Q7] 표본평균으로 모평균을 추정하려면 무엇이 필요한지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 충분한 표본 크기 → n이 클수록 정확<br/>ㄴ. 무작위 추출 → 편향 없는 표본<br/>ㄷ. 모표준편차 또는 표본표준편차 정보</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 표본 크기가 클수록 추정이 정확해지는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 무작위 추출의 방법을 예를 들어 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 점추정과 구간추정의 차이를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본평균이 모평균과 다른 이유를 설명하시오.<br/>[Q8] 표본평균이 모평균과 다를 수 있는 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 추출 변동 → 뽑힌 표본에 따라 평균이 달라짐<br/>ㄴ. 우연한 편향 → 특정 값이 더 많이 뽑힐 수 있음<br/>ㄷ. 표본 크기 한계 → 일부만 보고 전체 추정</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-1] 표본오차(sampling error)란 무엇인지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-2] 같은 모집단에서 다른 표본평균이 나오는 예를 드시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-3] 표본평균의 변동성을 줄이는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 크기와 표본평균의 관계를 설명하시오.<br/>[Q9] 표본의 크기가 커지면 표본평균은 어떻게 변하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. n=10 → 표본평균 변동 큼 / n=100 → 변동 작음<br/>ㄴ. 큰 수의 법칙 → n이 커지면 표본평균이 모평균에 수렴<br/>ㄷ. 표본평균의 표준편차 = <b style="color:#c2410c;">(σ)/(√{n)}</b> → n↑이면 표준편차↓</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-1] 큰 수의 법칙을 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-2] 표본 크기가 4배가 되면 표준오차는 몇 배가 되는지 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q9-3] 표본평균이 모평균에 가까워지는 원리를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본평균이 확률변수인 이유를 설명하시오.<br/>[Q10] 표본평균을 확률변수로 보는 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 표본을 뽑을 때마다 평균값이 달라짐<br/>ㄴ. 어떤 값이 나올지 미리 알 수 없음<br/>ㄷ. 표본평균도 확률분포를 가짐</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-1] 확률변수의 정의를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-2] 표본평균 <b style="color:#c2410c;">{X}</b>가 가질 수 있는 값의 범위를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q10-3] 같은 모집단에서 여러 번 표본 추출 시 표본평균이 달라지는 예를 드시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본을 다시 뽑을 때 평균이 달라지는 이유를 설명하시오.<br/>[Q11] 표본을 다시 뽑으면 평균이 달라지는 이유를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 무작위 추출 → 매번 다른 원소가 선택됨<br/>ㄴ. 1반에서 5명 추출 → 뽑힐 때마다 다른 학생<br/>ㄷ. 주사위 10번 → 매번 평균이 다름</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q11-1] 복원추출과 비복원추출의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q11-2] 표본평균의 분포(표집분포)를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q11-3] 표본평균의 기댓값이 모평균과 같은 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 단일 표본평균으로 추정할 때 주의점을 설명하시오.<br/>[Q12] 단 하나의 표본평균 값으로 모평균을 추정할 때 주의할 점을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 표본평균 ≠ 모평균 → 오차 존재<br/>ㄴ. 신뢰구간 제시 필요 → 범위로 표현<br/>ㄷ. 표본 크기 언급 → 신뢰성 판단 근거</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q12-1] 점추정의 한계를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q12-2] 구간추정이 점추정보다 유용한 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q12-3] 표본평균의 신뢰성을 높이는 방법을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 크기 증가에 따른 분포 변화를 설명하시오.<br/>[Q13] 표본의 크기가 커질수록 표본평균의 분포는 어떻게 변하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. n=5 → 넓게 퍼진 분포 / n=50 → 좁게 모인 분포<br/>ㄴ. 중심극한정리 → 정규분포에 가까워짐<br/>ㄷ. 분산이 <b style="color:#c2410c;">(σ²)/(n)</b>으로 줄어듦</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q13-1] 중심극한정리를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q13-2] 모집단이 정규분포가 아닐 때 표본평균의 분포를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q13-3] n이 충분히 크다는 것은 보통 얼마 이상인지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q14] 표본평균 분포의 평균과 분산은 어떻게 정해지는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br/>모집단: 평균 <b style="color:#c2410c;">μ</b>, 분산 <b style="color:#c2410c;">σ²</b><br/>표본평균 <b style="color:#c2410c;">{X}</b>의 분포:<br/>• <b style="color:#c2410c;">E({X}) = μ</b><br/>• <b style="color:#c2410c;">V({X}) = (σ²)/(n)</b><br/>• <b style="color:#c2410c;">{X} sim N(μ, (σ²)/(n))</b> (n이 충분히 클 때)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q14-1] <b style="color:#c2410c;">E({X}) = μ</b>가 의미하는 바를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q14-2] 표본평균의 분산이 <b style="color:#c2410c;">(σ²)/(n)</b>인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q14-3] 모평균 50, 모분산 100인 모집단에서 크기 25인 표본의 표본평균 분포를 구하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 정규근사 조건을 설명하시오.<br/>[Q15] 정규근사를 사용할 때 필요한 조건을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 모집단이 정규분포 → n에 관계없이 정규분포<br/>ㄴ. 모집단이 정규분포 아님 → n ≥ 30이면 근사 가능<br/>ㄷ. 중심극한정리 적용 → 표본 크기가 충분히 클 때</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q15-1] 모집단이 정규분포일 때 표본평균의 분포를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q15-2] n=30이 기준이 되는 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q15-3] 중심극한정리가 성립하지 않는 경우의 예를 드시오.</div>
+</div>
+</div>
+<div class="pt-title">Part2. 모평균의 추정</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q1] 특정 구간에 표본평균이 들어갈 확률은 어떻게 계산하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>모평균 <b style="color:#c2410c;">μ = 50</b>, 모표준편차 <b style="color:#c2410c;">σ = 10</b>, 표본크기 <b style="color:#c2410c;">n = 25</b>일 때<br/><b style="color:#c2410c;">P(48 ≤ {X} ≤ 52)</b> 계산:<br/>① 표준화: <b style="color:#c2410c;">Z = frac{{X} - 50}{10/√{25}} = frac{{X} - 50}{2}</b><br/>② <b style="color:#c2410c;">P(-1 ≤ Z ≤ 1)</b>을 표에서 찾기</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-1] 표본평균의 표준화 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-2] 모평균 100, 모표준편차 20, n=16일 때 <b style="color:#c2410c;">P(95 ≤ {X} ≤ 105)</b>를 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q1-3] 표본평균의 확률 계산 과정을 순서대로 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 크기 변화가 확률 계산에 미치는 영향을 설명하시오.<br/>[Q2] 표본크기가 변하면 확률 계산은 어떻게 달라지는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. n=25 → 표준오차 = <b style="color:#c2410c;">(σ)/(5)</b> / n=100 → 표준오차 = <b style="color:#c2410c;">(σ)/(10)</b><br/>ㄴ. n이 커지면 → 같은 구간에 들어갈 확률 증가<br/>ㄷ. n=25에서 n=100 → 분포가 더 좁아짐</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-1] 표본 크기가 4배가 되면 확률 계산이 어떻게 달라지는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-2] n=16과 n=64에서 같은 구간 확률을 비교하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q2-3] 표본 크기와 추정 정밀도의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 신뢰구간의 개념을 설명하시오.<br/>[Q3] 모평균이 포함될 가능성이 있는 범위를 뜻하는 용어를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 신뢰구간(confidence interval) = 모평균이 들어있을 것으로 믿는 구간<br/>ㄴ. "평균 키는 168~172cm 사이" → 신뢰구간 [168, 172]<br/>ㄷ. 점추정 + 오차범위 = 구간추정</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-1] 신뢰구간의 정의를 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-2] 신뢰구간과 점추정의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q3-3] 신뢰구간이 넓을 때와 좁을 때의 의미를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q4] 신뢰구간을 계산할 때 필요한 요소를 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[공식]</b><br/>신뢰구간: <b style="color:#c2410c;">{x} - z_α/2 · (σ)/(√{n)} ≤ μ ≤ {x} + z_α/2 · (σ)/(√{n)}</b><br/><br/>필요 요소:<br/>① 표본평균 <b style="color:#c2410c;">{x}</b><br/>② 모표준편차 <b style="color:#c2410c;">σ</b> (또는 표본표준편차)<br/>③ 표본크기 <b style="color:#c2410c;">n</b><br/>④ 신뢰도에 따른 <b style="color:#c2410c;">z</b>값 (95% → 1.96)</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-1] 95% 신뢰구간 공식을 쓰시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-2] 표본평균 50, 모표준편차 10, n=100일 때 95% 신뢰구간을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q4-3] 신뢰구간 공식에서 각 요소의 역할을 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 신뢰도의 의미를 설명하시오.<br/>[Q5] 신뢰도가 95%라는 말은 어떤 의미인지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 100번 신뢰구간을 구하면 약 95번은 모평균을 포함<br/>ㄴ. 이 구간에 모평균이 있을 확률이 95%라는 의미 아님<br/>ㄷ. 추정 방법의 신뢰성이 95%</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-1] 신뢰도 95%와 99%의 차이를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-2] "95% 확률로 모평균이 이 구간에 있다"가 틀린 해석인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q5-3] 신뢰도를 높이면 어떤 변화가 생기는지 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 표본 크기와 신뢰구간의 관계를 설명하시오.<br/>[Q6] 표본이 커지면 신뢰구간은 어떻게 달라지는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. n=25 → 오차범위 큼 / n=100 → 오차범위 작음<br/>ㄴ. <b style="color:#c2410c;">(σ)/(√{n)}</b> → n이 커지면 분모↑ → 오차↓<br/>ㄷ. 신뢰구간 좁아짐 = 추정 정밀도 증가</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-1] 표본 크기가 4배가 되면 신뢰구간 폭은 어떻게 변하는지 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-2] 신뢰구간을 절반으로 줄이려면 표본 크기를 몇 배로 해야 하는지 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q6-3] 표본 크기와 비용, 정밀도의 관계를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 중 하나를 골라 신뢰구간과 신뢰도의 관계를 설명하시오.<br/>[Q7] 신뢰구간을 넓히면 신뢰도는 어떻게 변하는지 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[보기]</b><br/>ㄱ. 좁은 구간(±1) → 낮은 신뢰도 / 넓은 구간(±3) → 높은 신뢰도<br/>ㄴ. 95% 신뢰구간 < 99% 신뢰구간 (폭 비교)<br/>ㄷ. 정밀도↑ ↔ 신뢰도↓ 의 트레이드오프</div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-1] 신뢰도 95%일 때 z=1.96, 99%일 때 z=2.58인 이유를 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-2] 신뢰도와 정밀도를 모두 높이려면 어떻게 해야 하는지 설명하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q7-3] 99% 신뢰구간이 95% 신뢰구간보다 넓은 이유를 설명하시오.</div>
+</div>
+</div>
+<div class="q-block"><div class="q-main">다음 문제에 대하여 설명하시오.<br/>[Q8] 모평균의 95% 신뢰구간을 구하는 전체 과정을 설명하시오.<br/><div style='margin-top:10px; padding:10px; border:1px solid #444; border-radius:8px;'><b>[예시]</b><br/>표본평균 <b style="color:#c2410c;">{x} = 72</b>, 모표준편차 <b style="color:#c2410c;">σ = 10</b>, <b style="color:#c2410c;">n = 100</b><br/>① 표준오차: <b style="color:#c2410c;">(10)/(√{100)} = 1</b><br/>② 오차범위: <b style="color:#c2410c;">1.96 × 1 = 1.96</b><br/>③ 신뢰구간: <b style="color:#c2410c;">72 - 1.96 ≤ μ ≤ 72 + 1.96</b><br/>④ 결과: <b style="color:#c2410c;">70.04 ≤ μ ≤ 73.96</b></div></div>
+<div class="sim-box"><div class="sim-label">유사 문제</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-1] 표본평균 80, 모표준편차 15, n=225일 때 95% 신뢰구간을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-2] 표본평균 50, 모표준편차 8, n=64일 때 99% 신뢰구간을 구하시오.</div>
+<div class="sim-q">다음 문제에 대하여 설명하시오.<br/>[Q8-3] 신뢰구간 [48, 52]이고 신뢰도 95%, n=100일 때 모표준편차를 추정하시오.</div>
+</div>
+</div>
+</body></html>
