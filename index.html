@@ -2424,9 +2424,12 @@
       let imageUrl = existingImageUrl;
       if (state.currentCanvas && state.canvasStrokes.length > 0) {
         try {
+          const targetStudentId = state.userType === 'admin'
+            ? (state.selectedStudent?.id || state.currentStudentUid)
+            : state.uid;
           imageUrl = await uploadCanvasImage(
             state.currentCanvas,
-            state.studentId,
+            targetStudentId,
             state.currentQuestion
           );
         } catch (error) {
