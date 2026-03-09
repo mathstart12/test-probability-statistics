@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ox-quiz-v1';
+const CACHE_NAME = 'ox-quiz-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -17,19 +17,39 @@ self.addEventListener('install', event => {
         return cache.addAll(urlsToCache);
       })
   );
+  self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
+  // HTML/navigate 요청은 network-first 전략
+  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          // 네트워크 응답 성공 시 캐시 업데이트
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, responseClone);
+          });
           return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
+        })
+        .catch(() => {
+          // 네트워크 실패 시 캐시에서 폴백
+          return caches.match(event.request);
+        })
+    );
+  } else {
+    // 나머지 정적 자원은 cache-first 전략
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        })
+    );
+  }
 });
 
 self.addEventListener('activate', event => {
@@ -45,4 +65,5 @@ self.addEventListener('activate', event => {
       );
     })
   );
+  self.clients.claim();
 });

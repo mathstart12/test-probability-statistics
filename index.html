@@ -1624,7 +1624,7 @@
       }
 
       function startDrawing(e) {
-        e.preventDefault();
+        if (e.cancelable) e.preventDefault();
         const coords = getCoordinates(e);
         isDrawing = true;
 
@@ -1647,7 +1647,7 @@
 
       function draw(e) {
         if (!isDrawing) return;
-        e.preventDefault();
+        if (e.cancelable) e.preventDefault();
         const coords = getCoordinates(e);
 
         if (state.isEraserMode) {
@@ -1674,7 +1674,7 @@
 
       function stopDrawing(e) {
         if (isDrawing) {
-          e.preventDefault();
+          if (e.cancelable) e.preventDefault();
           isDrawing = false;
 
           // 그리기 모드에서만 완성된 획 저장
@@ -2015,18 +2015,25 @@
         const tempCtx = tempCanvas.getContext('2d');
         tempCtx.drawImage(canvas, 0, 0, width, height);
 
-        const blob = await new Promise(resolve => {
-          tempCanvas.toBlob(resolve, 'image/jpeg', quality);
-        });
+        // Firebase Storage 업로드 시도
+        try {
+          const blob = await new Promise(resolve => {
+            tempCanvas.toBlob(resolve, 'image/jpeg', quality);
+          });
 
-        const filename = `handwriting/${studentId}/q${questionIndex}_${Date.now()}.jpg`;
-        const storageRef = storage.ref(filename);
-        const snapshot = await storageRef.put(blob);
-        const downloadUrl = await snapshot.ref.getDownloadURL();
+          const filename = `handwriting/${studentId}/q${questionIndex}_${Date.now()}.jpg`;
+          const storageRef = storage.ref(filename);
+          const snapshot = await storageRef.put(blob);
+          const downloadUrl = await snapshot.ref.getDownloadURL();
 
-        return downloadUrl;
+          return downloadUrl;
+        } catch (storageError) {
+          console.warn('Firebase Storage 업로드 실패, base64로 저장합니다:', storageError.message);
+          // Storage 실패 시 base64 data URL로 폴백 (용량 절약을 위해 품질 낮춤)
+          return tempCanvas.toDataURL('image/jpeg', 0.3);
+        }
       } catch (error) {
-        console.error('이미지 업로드 오류:', error);
+        console.error('이미지 처리 오류:', error);
         throw error;
       }
     }
@@ -4728,7 +4735,7 @@
                 <canvas
                   id="drawingCanvas"
                   class="w-full bg-white rounded-xl mb-3 touch-none"
-                  style="height: 450px; border: 2px solid #374151;"
+                  style="height: 450px; border: 2px solid #374151; touch-action: none;"
                 ></canvas>
 
                 <div class="flex items-center gap-3 bg-gray-800/50 p-2 rounded-lg">
